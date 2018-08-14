@@ -1,0 +1,28 @@
+[HTTP]
+host = ukuaiqi.com
+baseurl = https://ukuaiqi.com/p/oa
+app_userhost = user.ukuaiqi.com
+app_userbaseurl = https://user.ukuaiqi.com
+app_attachmenthost = attachment.ukuaiqi.com
+app_attachmentbaseurl = https://attachment.ukuaiqi.com/
+app_stathost = stat.ukuaiqi.com
+app_statbaseurl = https://stat.ukuaiqi.com
+
+[user]
+username = 16512345671
+password = 123456
+authorization =
+userid = 590aebdbe44c366eaf00009e
+
+[header]
+accept = */*
+loyoosversion = 10.3.1
+loyoversioncode = 2018013101
+accept-language = zh-Hans-CN;q=1
+accept-encoding = gzip, deflate
+content-type = application/json
+user-agent = KuaiQi/2.8.0 (iPhone; iOS 9.2.1; Scale/3.00)
+loyoplatform = iOS
+loyoversionname = 2.9.0
+connection = keep-alive
+loyoagent = iPhone9,1

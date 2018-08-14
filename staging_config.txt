@@ -1,0 +1,26 @@
+[HTTP]
+host = oa.staging.ukuaiqi.com
+baseurl = http://oa.staging.ukuaiqi.com
+app_userhost = user.staging.ukuaiqi.com
+app_userbaseurl = https://user.staging.ukuaiqi.com
+app_attachmenthost = attachment.staging.ukuaiqi.com
+app_attachmentbaseurl = https://attachment.staging.ukuaiqi.com/
+app_stathost = stat.staging.ukuaiqi.com
+app_statbaseurl = https://stat.staging.ukuaiqi.com
+
+[user]
+username = 16512345671
+password = 123456
+authorization =
+[header]
+accept = */*
+loyoosversion = 10.3.1
+loyoversioncode = 2018010401
+accept-language = zh-Hans-CN;q=1
+accept-encoding = gzip, deflate
+content-type = application/json
+user-agent = KuaiQi/2.7.0 (iPhone; iOS 10.3.1; Scale/2.00)
+loyoplatform = iOS
+loyoversionname = 2.9.0
+connection = keep-alive
+loyoagent = iPhone9,1

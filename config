@@ -1,0 +1,87 @@
+[HTTP]
+host = oa.staging.ukuaiqi.com
+baseurl = http://oa.staging.ukuaiqi.com
+app_userhost = user.staging.ukuaiqi.com
+app_userbaseurl = https://user.staging.ukuaiqi.com
+app_attachmenthost = attachment.staging.ukuaiqi.com
+app_attachmentbaseurl = https://attachment.staging.ukuaiqi.com/
+app_stathost = stat.staging.ukuaiqi.com
+app_statbaseurl = https://stat.staging.ukuaiqi.com
+
+[HTTP-product]
+host = ukuaiqi.com
+baseurl = https://ukuaiqi.com/p/oa
+app_userhost = user.ukuaiqi.com
+app_userbaseurl = https://user.ukuaiqi.com
+app_attachmenthost = attachment.ukuaiqi.com
+app_attachmentbaseurl = https://attachment.ukuaiqi.com
+app_stathost = stat.ukuaiqi.com
+app_statbaseurl = https://stat.ukuaiqi.com
+
+[user]
+username = 16512345671
+password = 123456
+authorization = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDdXJyZW50VXNlciI6eyJVc2VySWQiOiI1OTBhZWJkYmU0NGMzNjZlYWYwMDAwOWUiLCJNUEEiOjE1MzMwMDM1MDgsIkxveW9QbGF0Zm9ybSI6ImlPUyIsIkxveW9WZXJzaW9uQ29kZSI6IjIwMTgwNzA0MDEifSwiZXhwIjoxNTQ5MjY3MzY1fQ.qALuP2rVLs78oRLH8B9K-Y2_mDdEBplZt2BU_TaF1Pg
+userid = 590aebdbe44c366eaf00009e
+
+[header]
+accept = */*
+loyoosversion = 10.3.2
+loyoversioncode = 2018070401
+accept-language = zh-Hans-CN;q=1
+accept-encoding = gzip, deflate
+content-type = application/json
+user-agent = KuaiQi/2.11.0 (iPhone; iOS 11.4; Scale/2.00)
+loyoplatform = iOS
+loyoversionname = 2.10.0
+connection = keep-alive
+loyoagent = iPhone9,1
+
+[wf_instance]
+wfinstance = /api/v2/oa/wfinstance
+wfbizform = /api/v2/oa/wfbizform
+wftemplate = /api/v2/oa/wftpl/bizformId/
+
+[salesleads]
+ownsalesleads = /api/v2/salesleads/mobile
+detail = /api/v2/salesleads/mobile/
+
+[customer]
+customer = /api/v2/customer/
+tags = /api/v2/tags
+customer_own = /api/v2/customer/own/mobile/simplify
+customer_link = /api/v2/customer/link/mobile/simplify
+customer_team = /api/v2/customer/team/mobile/simplify
+customer_similar = /api/v2/customer/similar
+customer_detail = /api/v2/customer/new/
+customer_delete = /api/v2/customer/
+status_edit = /api/v2/customer/mobile/status/
+owner = /api/v2/customer/owner
+config = /api/v2/config
+reason = /api/v2/customer/reason
+create_contact = /api/v2/customer/contact/
+contact = /api/v2/contact/
+cus_saleactivity = /api/v2/saleactivity/search/
+cus_visit = /api/v2/visit/m/bycustId
+cus_order = /api/v2/order/cus/
+cus_chance = /api/v2/chance/allSale
+cus_wfinstance = /api/v2/oa/wfinstance/cus/
+cus_speedup = /api/v2/speedup/flowevent/flow/list/cus/
+cus_project = /api/v2/oa/project/query/cus/
+
+[follow]
+saleactivity_list = /api/v2/saleactivity/mobile/sale
+activity_type = /api/v2/saleactivitytype
+new_activity = /api/v2/customer/new/activity/
+activity = /api/v2/saleactivity
+
+[task]
+task_own = /api/v2/oa/task/query/mobile/simplify
+
+[project]
+query = /api/v2/oa/project/query
+
+[attachment]
+attachment = /api/v2/attachment/uuid/
+batch = /p/attachment/api/v2/attachment/
+
