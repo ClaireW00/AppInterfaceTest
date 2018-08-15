@@ -81,6 +81,10 @@ task_own = /api/v2/oa/task/query/mobile/simplify
 [project]
 query = /api/v2/oa/project/query
 
+[order]
+order_self = /api/v2/order/self
+
+
 [attachment]
 attachment = /api/v2/attachment/uuid/
 batch = /p/attachment/api/v2/attachment/

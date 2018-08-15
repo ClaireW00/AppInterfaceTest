@@ -4,7 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/testCase/project/project.py" line="51" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ec233d-63db-42e7-9bb9-ecdc7a7615a0" name="Default" comment="" />
+    <list default="true" id="92ec233d-63db-42e7-9bb9-ecdc7a7615a0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config" afterPath="$PROJECT_DIR$/config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/order/order.py" afterPath="$PROJECT_DIR$/testCase/order/order.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/order/test_order.py" afterPath="$PROJECT_DIR$/testCase/order/test_order.py" />
+    </list>
     <ignored path="appIFTest.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -251,10 +255,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="runAll.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="runAll.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runAll.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
+            <state relative-caret-position="798">
               <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
@@ -263,11 +267,36 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="order.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testCase/order/order.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_order.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testCase/order/test_order.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+              <folding>
+                <element signature="e#2047#3646#0" expanded="false" />
+                <element signature="e#3692#5107#0" expanded="false" />
+                <element signature="e#5158#8062#0" expanded="false" />
+                <element signature="e#8143#9881#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="config" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+            <state relative-caret-position="751">
+              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -281,6 +310,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -298,7 +330,6 @@
         <option value="$PROJECT_DIR$/testCase/workReport/test_workReport.py" />
         <option value="$PROJECT_DIR$/testCase/salesleads/test_Salesleads.py" />
         <option value="$PROJECT_DIR$/testCase/bulletin/bulletin.py" />
-        <option value="$PROJECT_DIR$/testCase/order/order.py" />
         <option value="$PROJECT_DIR$/testCase/follow/test_Follow.py" />
         <option value="$PROJECT_DIR$/testCase/order/test_Order.py" />
         <option value="$PROJECT_DIR$/testCase/product/product.py" />
@@ -332,10 +363,11 @@
         <option value="$PROJECT_DIR$/runAll.py" />
         <option value="$PROJECT_DIR$/testCase/chance/test_chance.py" />
         <option value="$PROJECT_DIR$/testCase/salesleads/test_salesleads.py" />
-        <option value="$PROJECT_DIR$/testCase/order/test_order.py" />
         <option value="$PROJECT_DIR$/testCase/wfinstance/test_wfinstance.py" />
         <option value="$PROJECT_DIR$/testCase/visit/test_visit.py" />
         <option value="$PROJECT_DIR$/config" />
+        <option value="$PROJECT_DIR$/testCase/order/order.py" />
+        <option value="$PROJECT_DIR$/testCase/order/test_order.py" />
       </list>
     </option>
   </component>
@@ -402,6 +434,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -448,35 +481,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="visit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppInterfaceTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppInterfaceTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commom" />
+              <option name="myItemId" value="order" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../interfaceTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RunManager" selected="Python.runAll">
@@ -884,7 +902,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.128125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1080,13 +1098,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../login/APPlogin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/login/APPlogin.py" />
     <entry file="file://$PROJECT_DIR$/commom/Log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1121,13 +1133,6 @@
             <element signature="e#867#1119#0" expanded="false" />
             <element signature="e#1175#1301#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/order/order.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1440,13 +1445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/order/test_order.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testCase/wfinstance/test_wfinstance.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -1487,7 +1485,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/runAll.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
+        <state relative-caret-position="798">
           <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
           <folding>
             <element signature="e#15#30#0" expanded="true" />
@@ -1497,9 +1495,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        <state relative-caret-position="751">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/order/order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/order/test_order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+          <folding>
+            <element signature="e#2047#3646#0" expanded="false" />
+            <element signature="e#3692#5107#0" expanded="false" />
+            <element signature="e#5158#8062#0" expanded="false" />
+            <element signature="e#8143#9881#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

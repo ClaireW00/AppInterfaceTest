@@ -13,27 +13,27 @@ class OrderCase(unittest.TestCase):
         cls.ord = order.Order()
         cls.cust = customerManger.CustomerManger()
 
+
     # 创建时间倒叙排序
     def test_MyOrder_O001(self):
         """测试获取我的订单列表：按创建时间倒叙"""
         param = {
             "filed": "createdAt",
-            "endType": 0,    # 结束时间
+            "orderBy": "desc",
             "pageSize": 20,
             "pageIndex": 1,
-            "startType": 0,   # 开始时间，0代表全部
             "status": 0  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
         }
-        result = self.ord.myOrder(param)
+        result = self.ord.order_self(param)
         u = user.User()
         login_name = u.getName()
-        self.assertEqual(result.status_code, 200)
-        json_response = result.json()
+        self.assertEqual(result.status_code, 200, msg=result.text)
+        result_json = result.json()
         print('我的订单列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
-        totalRecords = json_response["totalRecords"]
-        records = json_response["records"]  # list
-        if totalRecords > param["pageSize"]:
-            page = math.ceil(totalRecords / param["pageSize"])
+        total_records = result_json["totalRecords"]
+        records = result_json["records"]  # list
+        if total_records > param["pageSize"]:
+            page = math.ceil(total_records / param["pageSize"])
             for p in range(2, page + 1):
                 param["pageIndex"] = p
                 pageResult = self.ord.myOrder(param)
@@ -42,8 +42,8 @@ class OrderCase(unittest.TestCase):
                 pagedata = json["records"]
                 records.extend(pagedata)
         print("我的订单实际数据数量", len(records))
-        self.assertEqual(totalRecords, len(records), msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
-        if totalRecords > 0:
+        self.assertEqual(total_records, len(records), msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
+        if total_records > 0:
             firstAt = records[0]["createdAt"]
             for sa in records:
                 self.assertTrue(firstAt >= sa["createdAt"], msg='创建时间倒叙排序正确')  # 判断列表按创建时间倒叙排序
