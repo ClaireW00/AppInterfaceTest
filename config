@@ -69,6 +69,9 @@ cus_wfinstance = /api/v2/oa/wfinstance/cus/
 cus_speedup = /api/v2/speedup/flowevent/flow/list/cus/
 cus_project = /api/v2/oa/project/query/cus/
 
+[order]
+my_order = /api/v2/order/self
+
 [follow]
 saleactivity_list = /api/v2/saleactivity/mobile/sale
 activity_type = /api/v2/saleactivitytype
@@ -80,10 +83,6 @@ task_own = /api/v2/oa/task/query/mobile/simplify
 
 [project]
 query = /api/v2/oa/project/query
-
-[order]
-order_self = /api/v2/order/self
-
 
 [attachment]
 attachment = /api/v2/attachment/uuid/

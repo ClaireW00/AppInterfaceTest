@@ -1,18 +1,18 @@
-import unittest,math,random,time
+import math,random,time
 from testCase.order import order
 from testCase.user import user
 from testCase.product import product
 from testCase.customer import customerManger
+from commom import commonassert
 
 
-class OrderCase(unittest.TestCase):
+class OrderCase(commonassert.CommonTest):
 
     @classmethod
     def setUpClass(cls):
         print('订单管理：start')
         cls.ord = order.Order()
         cls.cust = customerManger.CustomerManger()
-
 
     # 创建时间倒叙排序
     def test_MyOrder_O001(self):
@@ -24,10 +24,10 @@ class OrderCase(unittest.TestCase):
             "pageIndex": 1,
             "status": 0  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
         }
-        result = self.ord.order_self(param)
+        result = self.ord.my_order(param)
         u = user.User()
         login_name = u.getName()
-        self.assertEqual(result.status_code, 200, msg=result.text)
+        self.assertStatus(result)
         result_json = result.json()
         print('我的订单列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
         total_records = result_json["totalRecords"]
@@ -36,10 +36,9 @@ class OrderCase(unittest.TestCase):
             page = math.ceil(total_records / param["pageSize"])
             for p in range(2, page + 1):
                 param["pageIndex"] = p
-                pageResult = self.ord.myOrder(param)
-                self.assertEqual(pageResult.status_code, 200, msg='翻页错误')
-                json = pageResult.json()
-                pagedata = json["records"]
+                page_result = self.ord.my_order(param)
+                self.assertStatus(page_result)
+                pagedata = page_result.json()["records"]
                 records.extend(pagedata)
         print("我的订单实际数据数量", len(records))
         self.assertEqual(total_records, len(records), msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同

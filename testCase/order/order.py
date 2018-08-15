@@ -14,8 +14,8 @@ class Order(object):
         self.header["Authorization"] = authorization
 
     # 获取我的订单列表
-    def order_self(self, param):
-        url = self.baseurl + self.f.get_url("order", "order_self")
+    def my_order(self, param):
+        url = self.baseurl + self.f.get_url("order", "my_order")
         result = requests.get(url, params=param, headers=self.header)
         return result
 
@@ -32,20 +32,16 @@ class Order(object):
         return result
 
 
-
-
-
 if __name__=="__main__":
-    param1 = {
-        "field": "lastActAt",
-        "order": "desc",
-        "pageSize": 20,
-        "pageIndex": 1,
-        "statusList": None,
-        "tagsParams": []
-    }
+    param1= {
+            "filed": "createdAt",
+            "orderBy": "desc",
+            "pageSize": 20,
+            "pageIndex": 1,
+            "status": 0  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
+        }
     o = Order()
-    print(o.MyOrder(param1).json())
+    print(o.my_order(param1))
 
 
 

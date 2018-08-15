@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>KuaiQi Test Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-08-08 16:01:09</p>
-<p class='attribute'><strong>Duration:</strong> 0:08:36.070000</p>
-<p class='attribute'><strong>Status:</strong> Pass 82 Failure 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-08-15 16:37:44</p>
+<p class='attribute'><strong>Duration:</strong> 0:07:57.181000</p>
+<p class='attribute'><strong>Status:</strong> Pass 78 Failure 1 Error 4</p>
 
 <p class='description'>测试用例执行明细</p>
 </div>
@@ -667,12 +667,12 @@ pt4.10:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr class='failClass'>
+<tr class='errorClass'>
     <td>order.test_order.OrderCase</td>
     <td>5</td>
-    <td>4</td>
-    <td>1</td>
+    <td>2</td>
     <td>0</td>
+    <td>3</td>
     <td><a href="javascript:showClassDetail('c6',5)">Detail</a></td>
 </tr>
 
@@ -681,22 +681,30 @@ pt4.10:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt6.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_MyOrder_O001: 测试获取我的订单列表：按创建时间倒叙</div></td>
+<tr id='ft6.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_MyOrder_O001: 测试获取我的订单列表：按创建时间倒叙</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.2')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.2')" >
+        error</a>
 
-    <div id='div_pt6.2' class="popup_window">
+    <div id='div_ft6.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt6.2: 
+ft6.2: Traceback (most recent call last):
+  File "E:\Python\AppInterfaceTest\testCase\order\test_order.py", line 27, in test_MyOrder_O001
+    result = self.ord.myOrder(param)
+AttributeError: 'Order' object has no attribute 'myOrder'
+Traceback (most recent call last):
+  File "E:\Python\AppInterfaceTest\testCase\order\test_order.py", line 27, in test_MyOrder_O001
+    result = self.ord.myOrder(param)
+AttributeError: 'Order' object has no attribute 'myOrder'
+
 
         </pre>
     </div>
@@ -706,12 +714,12 @@ pt6.2:
 </tr>
 
 <tr id='ft6.3' class='none'>
-    <td class='failCase'><div class='testcase'>test_MyOrder_O002: 测试获取我的订单列表：按成交金额倒叙</div></td>
+    <td class='errorCase'><div class='testcase'>test_MyOrder_O002: 测试获取我的订单列表：按成交金额倒叙</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.3')" >
-        fail</a>
+        error</a>
 
     <div id='div_ft6.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
@@ -721,13 +729,13 @@ pt6.2:
         <pre>
         
 ft6.3: Traceback (most recent call last):
-  File "E:\Python\AppInterfaceTest\testCase\order\test_order.py", line 86, in test_MyOrder_O002
-    self.assertTrue(firstMoney &gt;= sa["dealMoney"], msg=sa["title"])  # 判断列表最高金额排序
-AssertionError: False is not true : 空
+  File "E:\Python\AppInterfaceTest\testCase\order\test_order.py", line 64, in test_MyOrder_O002
+    result = self.ord.myOrder(param)
+AttributeError: 'Order' object has no attribute 'myOrder'
 Traceback (most recent call last):
-  File "E:\Python\AppInterfaceTest\testCase\order\test_order.py", line 86, in test_MyOrder_O002
-    self.assertTrue(firstMoney &gt;= sa["dealMoney"], msg=sa["title"])  # 判断列表最高金额排序
-AssertionError: False is not true : 空
+  File "E:\Python\AppInterfaceTest\testCase\order\test_order.py", line 64, in test_MyOrder_O002
+    result = self.ord.myOrder(param)
+AttributeError: 'Order' object has no attribute 'myOrder'
 
 
         </pre>
@@ -737,22 +745,30 @@ AssertionError: False is not true : 空
     </td>
 </tr>
 
-<tr id='pt6.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_MyOrder_O003: 测试获取我的订单列表：搜索（测试订单标题、客户名称、产品是否包含关键字）</div></td>
+<tr id='ft6.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_MyOrder_O003: 测试获取我的订单列表：搜索（测试订单标题、客户名称、产品是否包含关键字）</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.4')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.4')" >
+        error</a>
 
-    <div id='div_pt6.4' class="popup_window">
+    <div id='div_ft6.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt6.4: 
+ft6.4: Traceback (most recent call last):
+  File "E:\Python\AppInterfaceTest\testCase\order\test_order.py", line 98, in test_MyOrder_O003
+    result = self.ord.myOrder(param)
+AttributeError: 'Order' object has no attribute 'myOrder'
+Traceback (most recent call last):
+  File "E:\Python\AppInterfaceTest\testCase\order\test_order.py", line 98, in test_MyOrder_O003
+    result = self.ord.myOrder(param)
+AttributeError: 'Order' object has no attribute 'myOrder'
+
 
         </pre>
     </div>
@@ -915,12 +931,12 @@ pt7.9:
     </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>salesleads.test_salesleads.Salesleades</td>
     <td>6</td>
-    <td>6</td>
-    <td>0</td>
-    <td>0</td>
+    <td>4</td>
+    <td>1</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c8',6)">Detail</a></td>
 </tr>
 
@@ -972,22 +988,144 @@ pt8.2:
     </td>
 </tr>
 
-<tr id='pt8.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_TeamSaleslead: 测试获取团队线索</div></td>
+<tr id='ft8.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_TeamSaleslead: 测试获取团队线索</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.3')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.3')" >
+        error</a>
 
-    <div id='div_pt8.3' class="popup_window">
+    <div id='div_ft8.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft8.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt8.3: 
+ft8.3: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\http\client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\http\client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\http\client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\http\client.py", line 934, in _send_output
+    self.send(msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\http\client.py", line 877, in send
+    self.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x039F8FB0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='oa.staging.ukuaiqi.com', port=80): Max retries exceeded with url: /api/v2/salesleads/mobile/team?pageSize=20&amp;order=desc&amp;field=lastActAt&amp;pageIndex=445 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x039F8FB0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Python\AppInterfaceTest\testCase\salesleads\test_salesleads.py", line 212, in test_TeamSaleslead
+    pageResult=sale.teamSaleslead(param)
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\salesleads\salesleads.py", line 62, in teamSaleslead
+    result=requests.get(url,headers=self.header,params=param)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='oa.staging.ukuaiqi.com', port=80): Max retries exceeded with url: /api/v2/salesleads/mobile/team?pageSize=20&amp;order=desc&amp;field=lastActAt&amp;pageIndex=445 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x039F8FB0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',))
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\http\client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\http\client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\http\client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\http\client.py", line 934, in _send_output
+    self.send(msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\http\client.py", line 877, in send
+    self.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x039F8FB0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='oa.staging.ukuaiqi.com', port=80): Max retries exceeded with url: /api/v2/salesleads/mobile/team?pageSize=20&amp;order=desc&amp;field=lastActAt&amp;pageIndex=445 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x039F8FB0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Python\AppInterfaceTest\testCase\salesleads\test_salesleads.py", line 212, in test_TeamSaleslead
+    pageResult=sale.teamSaleslead(param)
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\salesleads\salesleads.py", line 62, in teamSaleslead
+    result=requests.get(url,headers=self.header,params=param)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='oa.staging.ukuaiqi.com', port=80): Max retries exceeded with url: /api/v2/salesleads/mobile/team?pageSize=20&amp;order=desc&amp;field=lastActAt&amp;pageIndex=445 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x039F8FB0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',))
+
 
         </pre>
     </div>
@@ -996,22 +1134,30 @@ pt8.3:
     </td>
 </tr>
 
-<tr id='pt8.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_editSalelead: 测试编辑线索用例：正常编辑线索</div></td>
+<tr id='ft8.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_editSalelead: 测试编辑线索用例：正常编辑线索</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.4')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.4')" >
+        fail</a>
 
-    <div id='div_pt8.4' class="popup_window">
+    <div id='div_ft8.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft8.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt8.4: 
+ft8.4: Traceback (most recent call last):
+  File "E:\Python\AppInterfaceTest\testCase\salesleads\test_salesleads.py", line 97, in test_editSalelead
+    self.assertEqual(result.json()["errcode"], 0, msg='返回信息错误')
+AssertionError: 60001 != 0 : 返回信息错误
+Traceback (most recent call last):
+  File "E:\Python\AppInterfaceTest\testCase\salesleads\test_salesleads.py", line 97, in test_editSalelead
+    self.assertEqual(result.json()["errcode"], 0, msg='返回信息错误')
+AssertionError: 60001 != 0 : 返回信息错误
+
 
         </pre>
     </div>
@@ -1410,9 +1556,9 @@ pt13.5:
 <tr id='total_row'>
     <td>Total</td>
     <td>83</td>
-    <td>82</td>
+    <td>78</td>
     <td>1</td>
-    <td>0</td>
+    <td>4</td>
     <td>&nbsp;</td>
 </tr>
 </table>

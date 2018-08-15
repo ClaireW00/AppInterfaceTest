@@ -5,7 +5,7 @@ class ReadConfig(object):
     def __init__(self):
         try:
             self.cf = configparser.ConfigParser()
-            self.cf.read('E:\\Python\\AppInterfaceTest\\config')
+            self.cf.read('C:\\Users\\Administrator\\AppInterfaceTest\\config')
         except Exception as e:
             print(e)
 
@@ -62,3 +62,4 @@ if __name__ == "__main__":
     # print(r.getUserValue('username'),r.getUserValue('password'))
     print(r.get_header())
     print(r.set_UserId("1256"))
+

@@ -5,12 +5,12 @@ import time
 import unittest
 import re
 from datetime import datetime, timedelta
-
 from testCase.customer import customerManger
 from testCase.user import user
+from commom import commonassert
 
 
-class CustomerManagerCase(unittest.TestCase):
+class CustomerManagerCase(commonassert.CommonTest):
     # 类属性
     custom = customerManger.CustomerManger()
     switcher = custom.cus_reason_switcher().json()["value"]  # 丢公海原因开关，1开启，0未开启
@@ -29,10 +29,8 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.get_tags(param)
         # 断言状态及错误码
-        self.assertEqual(result.status_code, 200)
+        self.assertErrcode(result)
         result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success")
         # 断言返回数据不为空
         data = result_json["data"]
         self.assertTrue(len(data) >= 2)
@@ -64,12 +62,9 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.new_customer(customer_data)
         # 断言请求状态和错误码是否正确
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result_json["errmsg"])
+        self.assertErrcode(result)
         # 断言客户信息是否正确
-        cust_response = result_json['data']
+        cust_response = result.json()['data']
         self.assertEqual(cust_response['name'], customer_data['name'], msg=cust_response['name'])
         self.assertEqual(cust_response["summary"], customer_data['summary'])
         self.assertEqual(cust_response["statusId"], customer_data['statusId'])
@@ -101,7 +96,7 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.new_customer(customer_data)
         # 请求状态和错误码是否正确
-        self.assertEqual(result.status_code, 200)
+        self.assertStatus(result)
         result_json = result.json()
         self.assertEqual(result_json['errcode'], 60001, msg=result.text)  # 错误时打印返回内容
         self.assertEqual(result_json['errmsg'], '客户名称不能为空或者不能全为空格!', msg=result.text)
@@ -132,10 +127,7 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.new_customer(customer_data)
         # 断言请求状态和错误码是否正确
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result_json["errmsg"])
+        self.assertErrcode(result)
 
     # 获取客户详情
     def test_customer_detail(self):
@@ -143,11 +135,8 @@ class CustomerManagerCase(unittest.TestCase):
         customer_id = self.cust.getCustomerID()
         result = self.cust.customer_detail(customer_id)
         # 断言返回状态码和错误码
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
-        data = result_json["data"]
+        self.assertErrcode(result)
+        data = result.json()["data"]
         # 断言客户的id与传入的id一致
         self.assertEqual(data["id"], customer_id, msg=data["name"])
 
@@ -165,17 +154,12 @@ class CustomerManagerCase(unittest.TestCase):
             "ids": customer_id
         }
         result = self.cust.owner_customer(data)
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        self.assertEqual(result.json()["errcode"], 0, msg=result.text)
-        self.assertEqual(result.json()["errmsg"], "success", msg=result.text)
+        self.assertErrcode(result)
         # 调用客户详情接口，查看负责人是否修改成功
         result_detail = self.cust.customer_detail(customer_id)
-        self.assertEqual(result_detail.status_code, 200, msg=result_detail.text)
-        detail_json = result_detail.json()
-        self.assertEqual(detail_json["errcode"], 0, msg=result_detail.text)
-        self.assertEqual(detail_json["errmsg"], "success", msg=result_detail.text)
+        self.assertErrcode(result_detail)
         # 客户详情查看负责人id和name是否与提交是数据一致
-        owner = detail_json["data"]["owner"]
+        owner = result_detail.json()["data"]["owner"]
         self.assertEqual(owner["name"], data["ownerName"], msg="转移后客户负责人显示错误")
         self.assertEqual(owner["id"], data["ownerId"], msg="转移后客户负责人显示错误")
 
@@ -185,7 +169,7 @@ class CustomerManagerCase(unittest.TestCase):
         customer_id = self.cust.getCustomerID()
         result = self.cust.delete_customer(customer_id)
         # 断言请求状态
-        self.assertEqual(result.status_code, 200, msg=result.text)
+        self.assertStatus(result)
         # 断言客户是否真的被删除，调用客户详情接口查看客户是否已被删除
         result_detail = self.cust.customer_detail(customer_id)
         self.assertEqual(result_detail.status_code, 200, msg=result_detail.text)
@@ -226,11 +210,8 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.edit_customer(edit_data, customer_id)
         # 断言返回状态及错误码
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
-        data = result_json["data"]
+        self.assertErrcode(result)
+        data = result.json()["data"]
         # 断言编辑数据提交后数据是否与提交一致
         self.assertEqual(edit_data["name"], data["name"], msg=data)
         self.assertEqual(edit_data["statusId"], data["statusId"], msg=data)
@@ -245,10 +226,7 @@ class CustomerManagerCase(unittest.TestCase):
             "statusId": status_id
         }
         result = self.cust.edit_status(customer_id, status)
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
+        self.assertErrcode(result)
         try:
             # 获取客户详情，断言状态是否修改成功
             result_detail = self.cust.customer_detail(customer_id)
@@ -273,12 +251,9 @@ class CustomerManagerCase(unittest.TestCase):
     def test_cus_reason(self):
         """获取丢公海原因"""
         result = self.cust.cus_reason()
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.content)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.content)
+        self.assertErrcode(result)
         # 列表有且仅有一条系统字段，“其他”
-        data = result_json["data"]
+        data = result.json()["data"]
         self.assertTrue(len(data) >= 1)
         sys = 0
         for reason in data:
@@ -301,11 +276,8 @@ class CustomerManagerCase(unittest.TestCase):
         customer_name = detail["name"]
         result = self.cust.cus_saleactivity(customer_id, param)
         # 断言请求状态和请求状态码
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
-        data = result_json["data"]
+        self.assertErrcode(result)
+        data = result.json()["data"]
         total_records = data["totalRecords"]
         records = data["records"]
         actual_total = len(records)
@@ -321,11 +293,8 @@ class CustomerManagerCase(unittest.TestCase):
             for p in range(2, page+1):
                 param["pageIndex"] = p
                 page_result = self.cust.cus_saleactivity(customer_id, param)
-                self.assertEqual(page_result.status_code, 200, msg=page_result.text)
-                page_json = page_result.json()
-                self.assertEqual(page_json["errcode"], 0,  msg=page_result.text)
-                self.assertEqual(page_json["errmsg"], "success",  msg=page_result.text)
-                page_records = page_json["data"]["records"]
+                self.assertErrcode(page_result)
+                page_records = page_result.json()["data"]["records"]
                 actual_total += len(page_records)
                 for saleact in page_records:
                     self.assertTrue(first_at >= saleact["createdAt"], msg=customer_name+str(saleact["createdAt"]))
@@ -346,11 +315,8 @@ class CustomerManagerCase(unittest.TestCase):
         customer_id = "5b04d9a48c2ec4b7480e3c98"
         result = self.cust.cus_saleactivity(customer_id, param)
         # 断言请求状态和请求状态码
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
-        data = result_json["data"]
+        self.assertErrcode(result)
+        data = result.json()["data"]
         total_records = data["totalRecords"]
         records = data["records"]
         success_code = 0
@@ -366,11 +332,8 @@ class CustomerManagerCase(unittest.TestCase):
             for p in range(2, page + 1):
                 param["pageIndex"] = p
                 page_result = self.cust.cus_saleactivity(customer_id, param)
-                self.assertEqual(page_result.status_code, 200, msg=page_result.text)
-                page_json = page_result.json()
-                self.assertEqual(page_json["errcode"], 0, msg=page_result.text)
-                self.assertEqual(page_json["errmsg"], "success", msg=page_result.text)
-                page_records = page_json["data"]["records"]
+                self.assertErrcode(page_result)
+                page_records = page_result.json()["data"]["records"]
                 for saleact in page_records:
                     if re.match(r'.*?\.mp3', saleact["audioUrl"]) is None:
                         audio.append(saleact["audioUrl"])
@@ -396,11 +359,8 @@ class CustomerManagerCase(unittest.TestCase):
             "pageSize": 20
         }
         result = self.cust.cus_visit(param)
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
-        data = result_json["data"]
+        self.assertErrcode(result)
+        data = result.json()["data"]
         total_records = data["totalRecords"]
         records = data["records"]
         actual_total = len(records)
@@ -417,11 +377,8 @@ class CustomerManagerCase(unittest.TestCase):
             for p in range(2, page + 1):
                 param["pageIndex"] = p
                 page_result = self.cust.cus_visit(param)
-                self.assertEqual(page_result.status_code, 200, msg=page_result.text)
-                page_json = page_result.json()
-                self.assertEqual(page_json["errcode"], 0, msg=page_result.text)
-                self.assertEqual(page_json["errmsg"], "success", msg=page_result.text)
-                page_records = page_json["data"]["records"]
+                self.assertErrcode(page_result)
+                page_records = page_result.json()["data"]["records"]
                 actual_total += len(page_records)
                 for vis in page_records:
                     self.assertTrue(first_at >= vis["createdAt"], msg=customer_name + str(vis["createdAt"]))
@@ -580,12 +537,9 @@ class CustomerManagerCase(unittest.TestCase):
             "pageSize": 20
         }
         result = self.cust.cus_project(customer_id, param)
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
-        total_records = result_json["data"]["totalRecords"]
-        records = result_json["data"]["records"]
+        self.assertErrcode(result)
+        total_records = result.json()["data"]["totalRecords"]
+        records = result.json()["data"]["records"]
         # 断言无数据时，records是None，且count=0
         if total_records == 0:
             self.assertIsNone(records, msg=result.text)
@@ -617,12 +571,9 @@ class CustomerManagerCase(unittest.TestCase):
             "qTime": 1
         }
         result = self.cust.cus_speedup(customer_id, param)
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
-        total_records = result_json["data"]["totalRecords"]
-        records = result_json["data"]["records"]
+        self.assertErrcode(result)
+        total_records = result.json()["data"]["totalRecords"]
+        records = result.json()["data"]["records"]
         actual_total = len(records)
         # 断言列表数据按开始时间倒序、且属于该客户
         if total_records > 0:
@@ -636,11 +587,8 @@ class CustomerManagerCase(unittest.TestCase):
             for p in range(2, page+1):
                 param["pageIndex"] = p
                 page_result = self.cust.cus_speedup(customer_id, param)
-                self.assertEqual(page_result, 200, msg=page_result.text)
-                page_json = page_result.json()
-                self.assertTrue(page_json["errcode"], 0, msg=page_result.text)
-                self.assertEqual(page_json["errmsg"], "success", msg=page_result.text)
-                page_records = page_json["data"]["records"]
+                self.assertErrcode(page_result)
+                page_records = page_result.json()["data"]["records"]
                 actual_total += len(page_records)
                 for speed in page_records:
                     self.assertEqual(first_at >= speed["startAt"], msg=customer_name + "的快点" + speed["flowTitle"])
@@ -701,11 +649,8 @@ class CustomerManagerCase(unittest.TestCase):
         self.assertEqual(result.status_code, 200, msg=result.content)
         # 查看客户详情，判断客户是否是公海客户
         result_detail = self.cust.customer_detail(customer_id)
-        self.assertEqual(result_detail.status_code, 200, msg=result_detail.text)
-        detail_json = result_detail.json()
-        self.assertEqual(detail_json["errcode"], 0, msg=result_detail.text)
-        self.assertEqual(detail_json["errmsg"], "success", msg=result_detail.text)
-        data = detail_json["data"]
+        self.assertErrcode(result_detail)
+        data = result_detail.json()["data"]
         # 断言客户为公海客户，丢公海类型、丢公海原因为空,丢公海人为登录人
         self.assertEqual(data["lock"], False, msg=data["name"])     # lock=false公海客户，lock=true非公海客户
         self.assertEqual(data["recycleType"], 1, msg=data["name"])  # 1手动丢公海，2自动丢公海
@@ -730,11 +675,8 @@ class CustomerManagerCase(unittest.TestCase):
         self.assertEqual(result.status_code, 200, msg=result.content)
         # 查看客户详情，判断客户是否是公海客户
         result_detail = self.cust.customer_detail(customer_id)
-        self.assertEqual(result_detail.status_code, 200, msg=result_detail.text)
-        detail_json = result_detail.json()
-        self.assertEqual(detail_json["errcode"], 0, msg=result_detail.text)
-        self.assertEqual(detail_json["errmsg"], "success", msg=result_detail.text)
-        data = detail_json["data"]
+        self.assertErrcode(result_detail)
+        data = result_detail.json()["data"]
         # 断言客户为公海客户，丢公海类型、丢公海原因,丢公海人为登录人
         self.assertEqual(data["lock"], False, msg=data["name"])     # lock=false公海客户，lock=true非公海客户
         self.assertEqual(data["recycleType"], 1, msg=data["name"])  # 1手动丢公海，2自动丢公海
@@ -755,12 +697,9 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.customer_OwnList(param)
         # 断言请求状态和错误码是否正确
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
+        self.assertErrcode(result)
         print('开发客户->我负责的列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
-        data = result_json["data"]
+        data = result.json()["data"]
         total_records = data["totalRecords"]
         records = data["records"]  # list
         actual_total = len(records)  # 实际数据数量
@@ -777,10 +716,8 @@ class CustomerManagerCase(unittest.TestCase):
             for p in range(2, page + 1):
                 param["pageIndex"] = p
                 page_result = self.cust.customer_OwnList(param)
-                self.assertEqual(page_result.status_code, 200, msg=p)
-                json = page_result.json()
-                self.assertEqual(json["errmsg"], "success", msg=p)
-                page_records = json["data"]["records"]
+                self.assertErrcode(page_result)
+                page_records = page_result.json()["data"]["records"]
                 actual_total += len(page_records)
                 # 断言翻页客户是否为开发客户，是否按跟进时间顺序排序
                 for cus in page_records:
@@ -804,11 +741,8 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.customer_OwnList(param)
         # 断言请求状态和错误码是否正确
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
-        data = result_json["data"]
+        self.assertErrcode(result)
+        data = result.json()["data"]
         total_records = data["totalRecords"]
         records = data["records"]  # list
         actual_total = len(records)  # 实际数据数量
@@ -825,10 +759,8 @@ class CustomerManagerCase(unittest.TestCase):
             for p in range(2, page + 1):
                 param["pageIndex"] = p
                 page_result = self.cust.customer_OwnList(param)
-                self.assertEqual(page_result.status_code, 200, msg=p)
-                json = page_result.json()
-                self.assertEqual(json["errmsg"], "success", msg=p)
-                page_records = json["data"]["records"]
+                self.assertErrcode(page_result)
+                page_records = page_result.json()["data"]["records"]
                 actual_total += len(page_records)
                 # 断言翻页客户是否为开发客户，是否按跟进时间顺序排序
                 for cus in page_records:
@@ -848,11 +780,8 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.customer_OwnList(param)
         # 断言请求状态和错误码是否正确
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
-        data = result_json["data"]
+        self.assertErrcode(result)
+        data = result.json()["data"]
         total_records = data["totalRecords"]
         records = data["records"]  # list
         actual_total = len(records)  # 实际数据数量
@@ -865,10 +794,8 @@ class CustomerManagerCase(unittest.TestCase):
             for p in range(2, page + 1):
                 param["pageIndex"] = p
                 page_result = self.cust.customer_OwnList(param)
-                self.assertEqual(page_result.status_code, 200, msg='翻页错误')
-                json = page_result.json()
-                self.assertEqual(json["errmsg"], "success", msg='翻页错误')
-                page_records = json["data"]["records"]
+                self.assertErrcode(page_result)
+                page_records = page_result.json()["data"]["records"]
                 actual_total += len(page_records)
                 for cus in page_records:
                     self.assertEqual(cus["customerType"], 1, msg=cus["name"])  # 判断客户为开发客户
@@ -891,12 +818,9 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.customer_link(param)
         # 断言请求状态和错误码是否正确
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
+        self.assertErrcode(result)
         print('开发客户->我参与的列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
-        data = result_json["data"]
+        data = result.json()["data"]
         total_records = data["totalRecords"]
         records = data["records"]  # list
         if records is None and total_records == 0:
@@ -916,10 +840,8 @@ class CustomerManagerCase(unittest.TestCase):
             for p in range(2, page + 1):
                 param["pageIndex"] = p
                 page_result = self.cust.customer_link(param)
-                self.assertEqual(page_result.status_code, 200, msg='翻页错误')
-                json = page_result.json()
-                self.assertEqual(json["errmsg"], "success", msg='翻页错误')
-                page_records = json["data"]["records"]
+                self.assertErrcode(page_result)
+                page_records = page_result.json()["data"]["records"]
                 actual_total += len(page_records)
                 # 断言数据为开发客户且排序正确
                 for cus in page_records:
@@ -945,12 +867,9 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.customer_team(param)
         # 断言请求状态和错误码是否正确
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        result_json = result.json()
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
+        self.assertErrcode(result)
         print('开发客户->团队客户的列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
-        data = result_json["data"]
+        data = result.json()["data"]
         total_records = data["totalRecords"]
         records = data["records"]  # list
         actual_total = len(records)  # 实际数据数量
@@ -966,10 +885,8 @@ class CustomerManagerCase(unittest.TestCase):
             for p in range(2, page + 1):
                 param["pageIndex"] = p
                 page_result = self.cust.customer_team(param)
-                self.assertEqual(page_result.status_code, 200, msg=p)
-                json = page_result.json()
-                self.assertEqual(json["errmsg"], "success", msg=p)
-                page_records = json["data"]["records"]
+                self.assertErrcode(page_result)
+                page_records = page_result.json()["data"]["records"]
                 actual_total += len(page_records)
                 # 断言数据为开发客户且按跟进时间顺序排序
                 for cus in page_records:
@@ -996,12 +913,9 @@ class CustomerManagerCase(unittest.TestCase):
         }
         result = self.cust.customer_team(param)
         # 断言请求状态和错误码是否正确
-        result_json = result.json()
-        self.assertEqual(result.status_code, 200)
-        self.assertEqual(result_json["errcode"], 0, msg=result.text)
-        self.assertEqual(result_json["errmsg"], "success", msg=result.text)
+        self.assertErrcode(result)
         print('开发客户->团队客户的列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
-        data = result_json["data"]
+        data = result.json()["data"]
         total_records = data["totalRecords"]
         records = data["records"]  # list
         actual_total = len(records)  # 实际数据数量
@@ -1018,10 +932,8 @@ class CustomerManagerCase(unittest.TestCase):
             for p in range(2, page + 1):
                 param["pageIndex"] = p
                 page_result = self.cust.customer_team(param)
-                self.assertEqual(page_result.status_code, 200, msg=p)
-                json = page_result.json()
-                self.assertEqual(json["errmsg"], "success", msg=p)
-                page_records = json["data"]["records"]
+                self.assertErrcode(page_result)
+                page_records = page_result.json()["data"]["records"]
                 actual_total += len(page_records)
                 for cus in page_records:
                     self.assertEqual(cus["customerType"], 1, msg=cus["name"])  # 判断客户为开发客户
@@ -1038,13 +950,13 @@ class CustomerManagerCase(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    file = "E:\\Python\\AppInterfaceTest\\testCase\\customer"
+    file = "C:\\Users\\Administrator\\AppInterfaceTest\\testCase\\customer"
     testcase = unittest.TestSuite()
     discover = unittest.defaultTestLoader.discover(file, "test*.py", top_level_dir=None)
     for suite in discover:
         for case in suite:
             testcase.addTest(case)
-    report = "E:\\Python\\AppInterfaceTest\\customer.html"
+    report = "C:\\Users\\Administrator\\AppInterfaceTest\\customer.html"
     fp = open(report, "wb")
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title="开发客户测试", description="开发客户接口测试")
     run = runner.run(testcase)
