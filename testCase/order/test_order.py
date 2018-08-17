@@ -1,4 +1,4 @@
-import math,random,time
+import math,random,time,unittest
 from testCase.order import order
 from testCase.user import user
 from testCase.product import product
@@ -13,6 +13,30 @@ class OrderCase(commonassert.CommonTest):
         print('订单管理：start')
         cls.ord = order.Order()
         cls.cust = customerManger.CustomerManger()
+        u = user.User()
+        cls.login_name = u.getName()
+
+    # 列表处理方式提炼
+    def listProcess(self, result, param, first_at, **kw):
+        self.assertStatus(result)
+        result_json = result.json()
+        total_records = result_json["totalRecords"]
+        records = result_json["records"]  # list
+        actual_total = len(records)
+        if total_records == 0:
+            self.assertEqual(actual_total, total_records, msg=result.text)
+            return
+        if param["pageIndex"] == 1:
+            first_at = records[0][param["filed"]]  # 第一条数据要排序字段的值
+        for sa in records:
+            if param["orderBy"] == "desc":
+                self.assertTrue(first_at >= sa[param["filed"]], msg=sa)
+            elif param["orderBy"] == "asc":
+                self.assertTrue(first_at <= sa[param["filed"]], msg=sa)
+            for key in kw:
+                self.assertEqual(sa[key], kw[key], msg=sa)  # 判断列表数据负责人是不是登录人，若不是打印出错误的数据
+            first_at = sa[param["filed"]]
+        return first_at, actual_total
 
     # 创建时间倒叙排序
     def test_MyOrder_O001(self):
@@ -25,9 +49,54 @@ class OrderCase(commonassert.CommonTest):
             "status": 0  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
         }
         result = self.ord.my_order(param)
-        u = user.User()
-        login_name = u.getName()
-        self.assertStatus(result)
+        print('我的订单列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
+        first_at, actual_total = self.listProcess(result, param, 0, directorName=self.login_name)
+        total_records = result.json()["totalRecords"]
+        if total_records > param["pageSize"]:
+            page = math.ceil(total_records / param["pageSize"])
+            for p in range(2, page + 1):
+                param["pageIndex"] = p
+                page_result = self.ord.my_order(param)
+                first_at, total_infor = self.listProcess(page_result, param, first_at, directorName=self.login_name)
+                actual_total += total_infor
+        print("我的订单实际数据数量", actual_total)
+        self.assertEqual(total_records, actual_total, msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
+
+    # 成交金额倒叙排序
+    def test_MyOrder_O002(self):
+        """测试获取我的订单列表：按成交金额倒叙"""
+        param = {
+            "filed": "dealMoney",
+            "orderBy": "desc",
+            "pageSize": 20,
+            "pageIndex": 1,
+            "startType": 0,  # 开始时间，0代表全部
+            "status": 0      # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
+        }
+        result = self.ord.my_order(param)
+        print('我的订单列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
+        first_at, actual_total = self.listProcess(result, param, 0, directorName=self.login_name)
+        total_records = result.json()["totalRecords"]
+        if total_records > param["pageSize"]:
+            page = math.ceil(total_records / param["pageSize"])
+            for p in range(2, page + 1):
+                param["pageIndex"] = p
+                page_result = self.ord.my_order(param)
+                first_at, total_infor = self.listProcess(page_result, param, first_at, directorName=self.login_name)
+                actual_total += total_infor
+        print("我的订单实际数据数量", actual_total, first_at)
+        self.assertEqual(total_records, actual_total, msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
+
+    # 搜索
+    def test_MyOrder_O003(self):
+        """测试获取我的订单列表：搜索（测试订单标题、客户名称、产品是否包含关键字）"""
+        param = {
+            "pageSize": 20,
+            "pageIndex": 1,
+            "keyWords": "快启"
+        }
+        result = self.ord.my_order(param)
+        self.assertEqual(result.status_code, 200)
         result_json = result.json()
         print('我的订单列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
         total_records = result_json["totalRecords"]
@@ -37,86 +106,16 @@ class OrderCase(commonassert.CommonTest):
             for p in range(2, page + 1):
                 param["pageIndex"] = p
                 page_result = self.ord.my_order(param)
-                self.assertStatus(page_result)
-                pagedata = page_result.json()["records"]
-                records.extend(pagedata)
-        print("我的订单实际数据数量", len(records))
-        self.assertEqual(total_records, len(records), msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
-        if total_records > 0:
-            firstAt = records[0]["createdAt"]
-            for sa in records:
-                self.assertTrue(firstAt >= sa["createdAt"], msg='创建时间倒叙排序正确')  # 判断列表按创建时间倒叙排序
-                self.assertEqual(sa["directorName"], login_name, msg=sa["title"])  # 判断列表数据负责人是不是登录人，若不是打印出错误的数据
-                firstAt = sa["createdAt"]
-
-    # 成交金额倒叙排序
-    def test_MyOrder_O002(self):
-        """测试获取我的订单列表：按成交金额倒叙"""
-        param = {
-            "filed":"dealMoney",
-            "endType": 0,  # 结束时间
-            "pageSize": 20,
-            "pageIndex": 1,
-            "startType": 0,  # 开始时间，0代表全部
-            "status": 0     # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
-        }
-        result = self.ord.myOrder(param)
-        u = user.User()
-        login_name = u.getName()
-        self.assertEqual(result.status_code, 200)
-        json_response = result.json()
-        print('我的订单列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
-        totalRecords = json_response["totalRecords"]
-        records = json_response["records"]  # list
-        if totalRecords > param["pageSize"]:
-            page = math.ceil(totalRecords / param["pageSize"])
-            for p in range(2, page + 1):
-                param["pageIndex"] = p
-                pageResult = self.ord.myOrder(param)
-                self.assertEqual(pageResult.status_code, 200, msg='翻页错误')
-                json = pageResult.json()
-                pagedata = json["records"]
-                records.extend(pagedata)
-        print("我的订单实际数据数量", len(records))
-        self.assertEqual(totalRecords, len(records), msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
-        if totalRecords > 0:
-            firstMoney = records[0]["dealMoney"]
-            for sa in records:
-                self.assertTrue(firstMoney >= sa["dealMoney"], msg=sa["title"])  # 判断列表最高金额排序
-                self.assertEqual(sa["directorName"], login_name, msg=sa["title"])  # 判断列表数据负责人是不是登录人，若不是打印出错误的数据
-                firstMoney = sa["dealMoney"]
-
-    # 搜索
-    def test_MyOrder_O003(self):
-        """测试获取我的订单列表：搜索（测试订单标题、客户名称、产品是否包含关键字）"""
-        param = {
-            "pageSize": 20,
-            "pageIndex": 1,
-            "keyWords":"快启"
-        }
-        result = self.ord.myOrder(param)
-        u = user.User()
-        login_name = u.getName()
-        self.assertEqual(result.status_code, 200)
-        json_response = result.json()
-        print('我的订单列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
-        totalRecords = json_response["totalRecords"]
-        records = json_response["records"]  # list
-        if totalRecords > param["pageSize"]:
-            page = math.ceil(totalRecords / param["pageSize"])
-            for p in range(2, page + 1):
-                param["pageIndex"] = p
-                pageResult = self.ord.myOrder(param)
-                self.assertEqual(pageResult.status_code, 200, msg='翻页错误')
-                json = pageResult.json()
+                self.assertEqual(page_result.status_code, 200, msg='翻页错误')
+                json = page_result.json()
                 pagedata = json["records"]
                 records.extend(pagedata)
         print("我的订单搜索结果数量", len(records))
-        self.assertEqual(totalRecords, len(records), msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
+        self.assertEqual(total_records, len(records), msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
         for sa in records:
-            exp=(param["keyWords"]in sa["title"])or(param["keyWords"]in sa["customerName"])or(param["keyWords"]in sa["proName"])
-            self.assertTrue(exp,msg=sa["title"])
-            self.assertEqual(sa["directorName"], login_name, msg=sa["title"])  # 判断列表数据负责人是不是登录人，若不是打印出错误的数据
+            exp = (param["keyWords"]in sa["title"])or(param["keyWords"]in sa["customerName"])or(param["keyWords"]in sa["proName"])
+            self.assertTrue(exp, msg=sa["title"])
+            self.assertEqual(sa["directorName"], self.login_name, msg=sa)  # 判断列表数据负责人是不是登录人，若不是打印出错误的数据
 
     # 新建订单
     def test_CreateOder_O001(self):
@@ -146,7 +145,7 @@ class OrderCase(commonassert.CommonTest):
             }],  # 回款计划
             "customerId": customer_id,
             "title": "订单"+time.strftime('%Y-%m-%d %H:%M',time.localtime(time.time())),
-            "dealMoney": random.randint(1000, 5000),
+            "dealMoney":  pro['totalMoney'],
             "endAt": -2209017601,
             "proInfo": [pro],   # 产品信息
             "proName": "小米5",
@@ -173,12 +172,9 @@ class OrderCase(commonassert.CommonTest):
             "startAt": 1516678260,
             "status": 0
         }
-        result = self.ord.createOrder(request_data)
-        self.assertEqual(result.status_code, 200, msg=result.text)
-        json_response = result.json()
-        self.assertEqual(json_response["errcode"], 0, msg=result.text)
-        self.assertEqual(json_response["errmsg"], "success", msg=result.text)
-        response_data = json_response['data']
+        result = self.ord.create_order(request_data)
+        self.assertErrcode(result)
+        response_data = result.json()['data']
         self.assertEqual(request_data["title"], response_data["title"], msg=response_data['title'])  # 判断订单标题是否一致
         # 判断成交金额吃否一致
         self.assertEqual(request_data['dealMoney'], response_data['dealMoney'], msg=response_data['dealMoney'])
@@ -186,45 +182,54 @@ class OrderCase(commonassert.CommonTest):
         self.assertEqual(request_data["customerId"], response_data["customerId"], msg=response_data['customerId'])
 
     # 测试获取团队订单列表，按创建时间倒叙（目前没测试数据权限）
-    def test_TeamOrder_O001(self):
+    def test_TeamOrder_O002(self):
         """获取团队订单"""
         param = {
             "filed": "createdAt",
-            "endType": 0,  # 结束时间
+            "orderBy": "desc",
             "pageSize": 20,
             "pageIndex": 1,
-            "startType": 0,  # 开始时间，0代表全部
             "status": 0  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
             }
-        result = self.ord.teamOrder(param)
-        self.assertEqual(result.status_code,200)
+        result = self.ord.team_order(param)
+        self.assertEqual(result.status_code, 200)
         print('团队订单列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
-        json_response=result.json()
-        self.assertTrue("totalRecords" in json_response,msg=json_response)    # 判断返回内容字端是否正确
-        totalRecords=json_response['totalRecords']
-        records=json_response['records']
-        if totalRecords>0:
-            firstAt=records[0]['createdAt']
-        for sa in records:    # 判断第一页数据是否按创建时间倒叙排序
-            self.assertTrue(firstAt>=sa['createdAt'])
-            firstAt=sa['createdAt']
-        realRecords = len(records)
-        if totalRecords>param['pageSize']:     # 翻页获取第一页以后的数据数据
-            page = math.ceil(totalRecords / param['pageSize'])    # 正向取整
-            for p in range(2,page+1):
-                param['pageIndex']=p
-                self.ord.teamOrder(param)
-                pageResult = self.ord.teamOrder(param)
-                self.assertEqual(pageResult.status_code, 200, msg='翻页错误')
-                json = pageResult.json()
-                pagedata = json["records"]
-                realRecords = realRecords+len(pagedata)
-                for sa in pagedata:    # 判断每页数据排序是否争取
-                    self.assertTrue(firstAt >= sa['createdAt'])
-                    firstAt = sa['createdAt']
+        first_at, actual_total = self.listProcess(result, param, 0)
+        total_records = result.json()["totalRecords"]
+        if total_records > param["pageSize"]:
+            page = math.ceil(total_records / param["pageSize"])
+            for p in range(2, page + 1):
+                param['pageIndex'] = p
+                page_result = self.ord.team_order(param)
+                first_at, total_infor = self.listProcess(page_result, param, first_at)
+                actual_total += total_infor
+        print("团队订单实际数据数量", actual_total)
+        self.assertEqual(total_records, actual_total, msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
 
-        print("团队订单实际数据数量", realRecords)
-        self.assertEqual(totalRecords, realRecords, msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
+    # 按状态查询
+    def test_TeamOder_002(self):
+        """团队订单：按状态查询"""
+        param = {
+            "filed": "createdAt",
+            "orderBy": "desc",
+            "pageSize": 20,
+            "pageIndex": 1,
+            "status": 3  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
+        }
+        result = self.ord.team_order(param)
+        self.assertEqual(result.status_code, 200)
+        print('团队订单列表响应时间：', result.elapsed.microseconds / 1000, 'ms')
+        first_at, actual_total = self.listProcess(result, param, 0, status=param["status"])
+        total_records = result.json()["totalRecords"]
+        if total_records > param["pageSize"]:
+            page = math.ceil(total_records / param["pageSize"])
+            for p in range(2, page + 1):
+                param['pageIndex'] = p
+                page_result = self.ord.team_order(param)
+                first_at, total_infor = self.listProcess(page_result, param, first_at, status=param["status"])
+                actual_total += total_infor
+        print("团队订单按状态删选结果：", actual_total)
+        self.assertEqual(total_records, actual_total, msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
 
     @classmethod
     def tearDownClass(cls):

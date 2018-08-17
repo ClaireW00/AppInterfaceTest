@@ -1,4 +1,4 @@
-[HTTP]
+[HTTP_staging]
 host = oa.staging.ukuaiqi.com
 baseurl = http://oa.staging.ukuaiqi.com
 app_userhost = user.staging.ukuaiqi.com
@@ -8,7 +8,7 @@ app_attachmentbaseurl = https://attachment.staging.ukuaiqi.com/
 app_stathost = stat.staging.ukuaiqi.com
 app_statbaseurl = https://stat.staging.ukuaiqi.com
 
-[HTTP-product]
+[HTTP]
 host = ukuaiqi.com
 baseurl = https://ukuaiqi.com/p/oa
 app_userhost = user.ukuaiqi.com
@@ -71,6 +71,8 @@ cus_project = /api/v2/oa/project/query/cus/
 
 [order]
 my_order = /api/v2/order/self
+team_order = /api/v2/order/team
+order = /api/v2/order
 
 [follow]
 saleactivity_list = /api/v2/saleactivity/mobile/sale

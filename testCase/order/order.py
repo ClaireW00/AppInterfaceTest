@@ -20,20 +20,20 @@ class Order(object):
         return result
 
     # 获取团队订单列表
-    def teamOrder(self,param):
-        url=self.baseurl+'/api/v2/order/team'
-        result=requests.get(url,params=param,headers=self.header)
+    def team_order(self, param):
+        url = self.baseurl + self.f.get_url("order", "team_order")
+        result = requests.get(url, params=param, headers=self.header)
         return result
 
-    #新建订单
-    def createOrder(self,data):
-        url=self.baseurl+"/api/v2/order"
-        result=requests.post(url,json=data,headers=self.header)
+    # 新建订单
+    def create_order(self, data):
+        url = self.baseurl + self.f.get_url("order", "order")
+        result = requests.post(url, json=data, headers=self.header)
         return result
 
 
-if __name__=="__main__":
-    param1= {
+if __name__ == "__main__":
+    param1 = {
             "filed": "createdAt",
             "orderBy": "desc",
             "pageSize": 20,

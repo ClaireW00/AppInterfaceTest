@@ -37,12 +37,12 @@ def all_case():  # 待执行用例的目录
 
 if __name__ == "__main__":
     token = set_token()
-
+    '''
     if token is not None:     # 登录成功后执行测试用例
         report_path = 'C:\\Users\\Administrator\\AppInterfaceTest\\result.html'
         fp = open(report_path, 'wb')
         runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='KuaiQi Test Report', description='测试用例执行明细')
         runner.run(all_case())
         fp.close()
-
+    '''
 
