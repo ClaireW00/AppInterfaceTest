@@ -25,7 +25,6 @@ class CommonTest(unittest.TestCase):
         firstAt = records[0][param["filed"]]        # 第一条数据要排序字段的值
         return firstAt
 
-
     # 新接口列表处理，新接口有errcode
     def new_listProcess(self, result):
         pass

@@ -13,15 +13,19 @@ class OrderCase(commonassert.CommonTest):
         print('订单管理：start')
         cls.ord = order.Order()
         cls.cust = customerManger.CustomerManger()
-        u = user.User()
-        cls.login_name = u.getName()
+        cls.u = user.User()
+        cls.login_name = cls.u.getName()
 
     # 列表处理方式提炼
-    def listProcess(self, result, param, first_at, **kw):
-        self.assertStatus(result)
-        result_json = result.json()
-        total_records = result_json["totalRecords"]
-        records = result_json["records"]  # list
+    def listProcess(self, result, param, first_at, port="old",  **kw):  # port接口为老接口还是新接口，老接口没返回errcode
+        if port == "old":
+            self.assertStatus(result)
+            data = result.json()
+        else:
+            self.assertErrcode(result)
+            data = result.json()["data"]
+        total_records = data["totalRecords"]
+        records = data["records"]  # list
         actual_total = len(records)
         if total_records == 0:
             self.assertEqual(actual_total, total_records, msg=result.text)
@@ -38,7 +42,7 @@ class OrderCase(commonassert.CommonTest):
             first_at = sa[param["filed"]]
         return first_at, actual_total
 
-    # 创建时间倒叙排序
+    # 我负责的创建时间倒叙排序
     def test_MyOrder_O001(self):
         """测试获取我的订单列表：按创建时间倒叙"""
         param = {
@@ -59,7 +63,7 @@ class OrderCase(commonassert.CommonTest):
                 page_result = self.ord.my_order(param)
                 first_at, total_infor = self.listProcess(page_result, param, first_at, directorName=self.login_name)
                 actual_total += total_infor
-        print("我的订单实际数据数量", actual_total)
+        print("我负责的订单实际数据数量", actual_total)
         self.assertEqual(total_records, actual_total, msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
 
     # 成交金额倒叙排序
@@ -84,7 +88,6 @@ class OrderCase(commonassert.CommonTest):
                 page_result = self.ord.my_order(param)
                 first_at, total_infor = self.listProcess(page_result, param, first_at, directorName=self.login_name)
                 actual_total += total_infor
-        print("我的订单实际数据数量", actual_total, first_at)
         self.assertEqual(total_records, actual_total, msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
 
     # 搜索
@@ -110,12 +113,48 @@ class OrderCase(commonassert.CommonTest):
                 json = page_result.json()
                 pagedata = json["records"]
                 records.extend(pagedata)
-        print("我的订单搜索结果数量", len(records))
+        print("我负责的订单搜索结果数量", len(records))
         self.assertEqual(total_records, len(records), msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
         for sa in records:
             exp = (param["keyWords"]in sa["title"])or(param["keyWords"]in sa["customerName"])or(param["keyWords"]in sa["proName"])
             self.assertTrue(exp, msg=sa["title"])
             self.assertEqual(sa["directorName"], self.login_name, msg=sa)  # 判断列表数据负责人是不是登录人，若不是打印出错误的数据
+
+    # 查看订单详情
+    def test_detail(self):
+        """订单详情"""
+        param = {
+            "filed": "createdAt",
+            "orderBy": "desc",
+            "pageSize": 20,
+            "pageIndex": 1,
+            "status": 0  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
+        }
+        order_id = self.ord.get_order(param)["id"]
+        result = self.ord.order_detail(order_id)
+        self.assertErrcode(result)
+        self.assertEqual(order_id, result.json()["data"]["id"])  # 详情订单id与传入得id相同
+
+    # 设置参与人
+    def test_edit_partner(self):
+        """设置参与人"""
+        param = {
+            "filed": "createdAt",
+            "orderBy": "desc",
+            "pageSize": 20,
+            "pageIndex": 1,
+            "status": 3  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
+        }
+        order_id = self.ord.get_order(param)["id"]
+        data = {
+            "members": [self.u.get_User("陈老师"),
+                        self.u.get_User("刘洋C")]
+        }
+        result = self.ord.edit_partner(order_id, data)
+        self.assertErrcode(result)
+        ord_detail = self.ord.order_detail(order_id).json()["data"]
+        print("设置参与人的订单：", ord_detail["title"])
+        self.assertEqual(data["members"], ord_detail["members"], msg=ord_detail["title"])  # 断言设置联系人后，订单详情联系人与设置一致
 
     # 新建订单
     def test_CreateOder_O001(self):
@@ -181,8 +220,31 @@ class OrderCase(commonassert.CommonTest):
         # 判断客户ID是否一致
         self.assertEqual(request_data["customerId"], response_data["customerId"], msg=response_data['customerId'])
 
+    # 测试获取我参与的订单，按创建时间倒叙排序
+    def test_LinkOrder(self):
+        """我参与的订单列表"""
+        param = {
+            "filed": "createdAt",
+            "orderBy": "desc",
+            "pageIndex": 1,
+            "pageSize": 20,
+            "status": 0
+        }
+        result = self.ord.link_order(param)
+        first_at, actual_total = self.listProcess(result, param, 0, port="new")
+        total_records = result.json()["data"]["totalRecords"]
+        if total_records > param["pageSize"]:
+            page = math.ceil(total_records / param["pageSize"])
+            for p in range(2, page + 1):
+                param['pageIndex'] = p
+                page_result = self.ord.link_order(param)
+                first_at, total_infor = self.listProcess(page_result, param, first_at, port="new")
+                actual_total += total_infor
+        print("我参与的订单实际数据数量", actual_total)
+        self.assertEqual(total_records, actual_total, msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
+
     # 测试获取团队订单列表，按创建时间倒叙（目前没测试数据权限）
-    def test_TeamOrder_O002(self):
+    def test_TeamOrder_O01(self):
         """获取团队订单"""
         param = {
             "filed": "createdAt",
@@ -228,8 +290,14 @@ class OrderCase(commonassert.CommonTest):
                 page_result = self.ord.team_order(param)
                 first_at, total_infor = self.listProcess(page_result, param, first_at, status=param["status"])
                 actual_total += total_infor
-        print("团队订单按状态删选结果：", actual_total)
+        print("团队订单按状态筛选结果：", actual_total)
         self.assertEqual(total_records, actual_total, msg='返回总数与实际数量总数不同')  # 判断返回的数据总数与实际数据数量是否相同
+
+    # 获取回款方式
+    def test_payee(self):
+        """获取回款方式"""
+        result = self.ord.payee()
+        self.assertErrcode(result)
 
     @classmethod
     def tearDownClass(cls):

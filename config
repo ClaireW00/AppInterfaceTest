@@ -71,8 +71,11 @@ cus_project = /api/v2/oa/project/query/cus/
 
 [order]
 my_order = /api/v2/order/self
+link_order = /api/v2/order/link
 team_order = /api/v2/order/team
 order = /api/v2/order
+payee = /api/v2/order/payee
+partner = /api/v2/order/partner/
 
 [follow]
 saleactivity_list = /api/v2/saleactivity/mobile/sale

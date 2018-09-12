@@ -69,13 +69,12 @@ class User(object):
         return deptusersId
 
     # 根据用户名获取某个人员的信息
-    def get_User(self, userName):
+    def get_User(self, username):
         r = self.get_Organization()
         if r.status_code != 200:
             return None
         oranization = r.json()  # 返回类型为list，每个值为一个部门信息
-        user = {}
-        user['name'] = userName
+        user = {'name': username}
         for dept in oranization:
             if "users" not in dept.keys():
                 continue
@@ -83,7 +82,7 @@ class User(object):
             n = 0
             while n < len(users):
                 user_response = users[n]  # user类型为字典
-                if user_response['name'] == userName:
+                if user_response['name'] == username:
                     user["id"] = user_response["id"]
                     user["avatar"] = user_response["avatar"]
                     break
@@ -134,10 +133,10 @@ class User(object):
 if __name__ == '__main__':
     u = User()
     # print(u.get_Dept("web前端"))
-    # print(u.get_User('布莱尔'))
+    print(u.get_User('布莱尔'))
     # print(u.get_UserId("陈老师"))
     # print(u.get_DeptUsersId("57d6333cd33c65554d80513a/57d64d51d33c653e3a000028"))
     # print(u.getName())
     # print(u.get_UserProfile().json())
-    print(u.get_colleague())
+    # print(u.get_colleague())
 
