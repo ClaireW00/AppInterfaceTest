@@ -76,6 +76,7 @@ team_order = /api/v2/order/team
 order = /api/v2/order
 payee = /api/v2/order/payee
 partner = /api/v2/order/partner/
+pay = /api/v2/order/pay
 
 [follow]
 saleactivity_list = /api/v2/saleactivity/mobile/sale

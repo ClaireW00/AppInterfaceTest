@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92ec233d-63db-42e7-9bb9-ecdc7a7615a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commom/commonassert.py" afterPath="$PROJECT_DIR$/commom/commonassert.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config" afterPath="$PROJECT_DIR$/config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result.html" afterPath="$PROJECT_DIR$/result.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runAll.py" afterPath="$PROJECT_DIR$/runAll.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/order/order.py" afterPath="$PROJECT_DIR$/testCase/order/order.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/order/test_order.py" afterPath="$PROJECT_DIR$/testCase/order/test_order.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/user/user.py" afterPath="$PROJECT_DIR$/testCase/user/user.py" />
     </list>
     <ignored path="appIFTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -282,11 +276,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="runAll.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="runAll.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runAll.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="874">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
               </folding>
@@ -297,14 +291,14 @@
       <file leaf-file-name="config" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+            <state relative-caret-position="466">
+              <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commonassert.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="commonassert.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commom/commonassert.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
@@ -317,7 +311,7 @@
       <file leaf-file-name="order.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCase/order/order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
+            <state relative-caret-position="380">
               <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
               <folding>
                 <element signature="e#103#449#0" expanded="false" />
@@ -336,8 +330,8 @@
       <file leaf-file-name="test_order.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCase/order/test_order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+            <state relative-caret-position="779">
+              <caret line="299" column="34" selection-start-line="299" selection-start-column="34" selection-end-line="299" selection-end-column="34" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
                 <element signature="e#306#477#0" expanded="false" />
@@ -369,7 +363,7 @@
       <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCase/user/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
+            <state relative-caret-position="570">
               <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
               <folding>
                 <element signature="e#615#737#0" expanded="false" />
@@ -446,10 +440,10 @@
         <option value="$PROJECT_DIR$/testCase/product/product.py" />
         <option value="$PROJECT_DIR$/commom/commonassert.py" />
         <option value="$PROJECT_DIR$/testCase/user/user.py" />
-        <option value="$PROJECT_DIR$/config" />
         <option value="$PROJECT_DIR$/testCase/order/order.py" />
         <option value="$PROJECT_DIR$/testCase/order/test_order.py" />
         <option value="$PROJECT_DIR$/runAll.py" />
+        <option value="$PROJECT_DIR$/config" />
       </list>
     </option>
   </component>
@@ -516,7 +510,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -588,6 +581,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1010,12 +1004,12 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3689218" sideWeight="0.49583334" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3689218" sideWeight="0.49583334" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1488,18 +1482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readConfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding>
-            <element signature="e#449#503#0" expanded="false" />
-            <element signature="e#567#619#0" expanded="false" />
-            <element signature="e#1074#1620#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testCase/customer/test_customerManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -1582,17 +1564,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commom/commonassert.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testCase/user/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="570">
           <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
           <folding>
             <element signature="e#615#737#0" expanded="false" />
@@ -1606,17 +1580,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testCase/order/order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
+        <state relative-caret-position="380">
           <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding>
             <element signature="e#103#449#0" expanded="false" />
@@ -1631,10 +1597,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/readConfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="e#449#503#0" expanded="false" />
+            <element signature="e#567#619#0" expanded="false" />
+            <element signature="e#1074#1620#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testCase/order/test_order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        <state relative-caret-position="779">
+          <caret line="299" column="34" selection-start-line="299" selection-start-column="34" selection-end-line="299" selection-end-column="34" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
             <element signature="e#306#477#0" expanded="false" />
@@ -1662,13 +1650,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runAll.py">
+    <entry file="file://$PROJECT_DIR$/config">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="466">
+          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commom/commonassert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
