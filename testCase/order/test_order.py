@@ -1,9 +1,11 @@
-import math,random,time,unittest
+import math, random, time, unittest
 from testCase.order import order
 from testCase.user import user
 from testCase.product import product
 from testCase.customer import customerManger
 from commom import commonassert
+from commom import attachments
+from datetime import datetime
 
 
 class OrderCase(commonassert.CommonTest):
@@ -298,6 +300,83 @@ class OrderCase(commonassert.CommonTest):
         """获取回款方式"""
         result = self.ord.payee()
         self.assertErrcode(result)
+
+    # 新增回款记录
+    def test_pay(self):
+        """新增回款记录"""
+        param = {
+            "filed": "createdAt",
+            "orderBy": "desc",
+            "pageSize": 20,
+            "pageIndex": 1,
+            "status": 3  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
+        }
+        pay_method = self.ord.payee().json()["data"][0]
+        data = {
+            "remark": "备注" + str(random.randint(0, 1000)),
+            "payeeUser": self.u.get_User(self.u.getName()),
+            "receivedMoney": random.randint(200, 1000),
+            "orderId": self.ord.get_order(param)["id"],
+            "attachmentCount": 1,
+            "payeeMethodName": pay_method["name"],
+            "uuid": attachments.attachments("26")["UUId"],    # 回款记录bizType为26
+            "payeeMethod": pay_method["order"],
+            "receivedAt": int(datetime(datetime.now().year, datetime.now().month, datetime.now().day).timestamp()),
+            "billingMoney": random.randint(200, 1000)
+        }
+        result = self.ord.pay(data)
+        self.assertStatus(result)
+        data_response = result.json()
+        print(data_response["orderTitle"])
+        # 断言请求值与返回值相同
+        for key in data:
+            self.assertEqual(data[key], data_response[key], msg=data["orderId"])
+
+    # 新增回款计划
+    def test_plan(self):
+        param = {
+            "filed": "createdAt",
+            "orderBy": "desc",
+            "pageSize": 20,
+            "pageIndex": 1,
+            "status": 3  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
+        }
+        pay_method = self.ord.payee().json()["data"][0]
+        data = {
+            "planAt": int(datetime.now().timestamp()) + (86400 * 5),    # 计划回款时间，5天后
+            "orderId": self.ord.get_order(param)["id"],
+            "remark": "回款计划备注测试" + str(datetime.now()),
+            "payeeMethodName": pay_method["name"],
+            "payeeMethod":  pay_method["order"],
+            "planMoney": random.randint(1000, 2000),
+            "remindType": 3     # 提醒方式，1计划前1天， 2前2天，3前3天，4前一周，5不提醒
+        }
+        result = self.ord.plan(data)
+        self.assertStatus(result)
+        data_response = result.json()
+        print("添加回款计划的订单：", data_response["orderId"])
+        for key in data:
+            self.assertEqual(data[key], data_response[key], msg=data["orderId"])
+
+    # 更改负责人
+    def test_owner(self):
+        param = {
+            "filed": "createdAt",
+            "orderBy": "desc",
+            "pageSize": 20,
+            "pageIndex": 1,
+            "status": 4  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
+        }
+        order_id = self.ord.get_order(param)["id"]
+        data = {
+            "ids": order_id,
+            "owner": {
+                         "id": self.u.get_User("陈老师")["id"]
+            }
+        }
+        result = self.ord.owner(data)
+        self.assertErrcode(result)
+        print("更改负责人的订单：", order_id)
 
     @classmethod
     def tearDownClass(cls):

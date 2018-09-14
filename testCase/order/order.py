@@ -27,7 +27,7 @@ class Order(object):
         if len(records) == 0:
             print("records is None")
             return
-        ordmes = records[random.randint(0, len(records))]  # 符合条件的任意一个订单
+        ordmes = records[random.randint(0, len(records)-1)]  # 符合条件的任意一个订单
         return ordmes
 
     # 获取我参与的订单
@@ -67,6 +67,23 @@ class Order(object):
         result = requests.get(url, headers=self.header)
         return result
 
+    # 新增回款记录
+    def pay(self, data):
+        url = self.baseurl + self.f.get_url("order", "pay")
+        result = requests.post(url, headers=self.header, json=data)
+        return result
+
+    # 新增回款计划
+    def plan(self, data):
+        url = self.baseurl + self.f.get_url("order", "plan")
+        result = requests.post(url, headers=self.header, json=data)
+        return result
+
+    # 更改订单负责人
+    def owner(self, data):
+        url = self.baseurl + self.f.get_url("order", "owner")
+        result = requests.put(url, headers=self.header, json=data)
+        return result
 
 if __name__ == "__main__":
     param1 = {

@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="92ec233d-63db-42e7-9bb9-ecdc7a7615a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commom/attachments.py" afterPath="$PROJECT_DIR$/commom/attachments.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config" afterPath="$PROJECT_DIR$/config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result.html" afterPath="$PROJECT_DIR$/result.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/chance/test_chance.py" afterPath="$PROJECT_DIR$/testCase/chance/test_chance.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/follow/test_follow.py" afterPath="$PROJECT_DIR$/testCase/follow/test_follow.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/order/order.py" afterPath="$PROJECT_DIR$/testCase/order/order.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/order/test_order.py" afterPath="$PROJECT_DIR$/testCase/order/test_order.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/salesleads/test_salesleads.py" afterPath="$PROJECT_DIR$/testCase/salesleads/test_salesleads.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCase/user/user.py" afterPath="$PROJECT_DIR$/testCase/user/user.py" />
     </list>
     <ignored path="appIFTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,6 +41,7 @@
     <SUITE FILE_PATH="coverage/AppInterfaceTest$salesleads.coverage" NAME="salesleads Coverage Results" MODIFIED="1516183109692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/salesleads" />
     <SUITE FILE_PATH="coverage/wllInterfaceTest$readConfig.coverage" NAME="readConfig Coverage Results" MODIFIED="1515723939686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustomerManagerCase_test_customer_statusnull.coverage" NAME="Unittest CustomerManagerCase.test_customer_statusnull Coverage Results" MODIFIED="1534315894034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_pay__1_.coverage" NAME="Unittest OrderCase.test_pay (1) Coverage Results" MODIFIED="1536835313372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittests_in_VisitCase__4_.coverage" NAME="Unittests in VisitCase (4) Coverage Results" MODIFIED="1516002950894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/visit" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_similar_custlist.coverage" NAME="Unittest FollowCase.test_similar_custlist Coverage Results" MODIFIED="1531969666040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ProjectCase_test_project_query.coverage" NAME="Unittest ProjectCase.test_project_query Coverage Results" MODIFIED="1529638547607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/project" />
@@ -56,6 +66,7 @@
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_VisitCase_test_VisitList_user.coverage" NAME="Unittest VisitCase.test_VisitList_user Coverage Results" MODIFIED="1516242039276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/visit" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_WorkReportCase_test_Edit_Wreport.coverage" NAME="Unittest WorkReportCase.test_Edit_Wreport Coverage Results" MODIFIED="1516256269713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/workReport" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_Salesleades_test_getSalelead.coverage" NAME="Unittest Salesleades.test_getSalelead Coverage Results" MODIFIED="1531985760144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/salesleads" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_plan.coverage" NAME="Unittest OrderCase.test_plan Coverage Results" MODIFIED="1536896972716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
     <SUITE FILE_PATH="coverage/wllInterfaceTest$Unittests_in_CustormList__1_.coverage" NAME="Unittests in CustormList (1) Coverage Results" MODIFIED="1515493080780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/custorm" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittests_in_test_workReport.coverage" NAME="Unittests in test_workReport Coverage Results" MODIFIED="1516258580691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/workReport" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustomerManagerCase_test_ownlist_lastActAt_desc.coverage" NAME="Unittest CustomerManagerCase.test_ownlist_lastActAt_desc Coverage Results" MODIFIED="1534317180268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
@@ -74,9 +85,9 @@
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_create_follow.coverage" NAME="Unittest FollowCase.test_create_follow Coverage Results" MODIFIED="1531897430179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_followList_004.coverage" NAME="Unittest FollowCase.test_followList_004 Coverage Results" MODIFIED="1532331472938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ProjectCase_test_my_list_002.coverage" NAME="Unittest ProjectCase.test_my_list_002 Coverage Results" MODIFIED="1521622715826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/project" />
-    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ChanceCase_test_MyChance_002.coverage" NAME="Unittest ChanceCase.test_MyChance_002 Coverage Results" MODIFIED="1519289416609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/chance" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ChanceCase_test_MyChance_002.coverage" NAME="Unittest ChanceCase.test_MyChance_002 Coverage Results" MODIFIED="1536908272966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/chance" />
     <SUITE FILE_PATH="coverage/wllInterfaceTest$Unittest_CustormManager_test_newCustorm.coverage" NAME="Unittest CustormManager.test_newCustorm Coverage Results" MODIFIED="1515484246585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/custorm" />
-    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_followList_001.coverage" NAME="Unittest FollowCase.test_followList_001 Coverage Results" MODIFIED="1532079173969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_followList_001.coverage" NAME="Unittest FollowCase.test_followList_001 Coverage Results" MODIFIED="1536910979812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustormManagerCase_test_EditCustomer_004.coverage" NAME="Unittest CustormManagerCase.test_EditCustomer_004 Coverage Results" MODIFIED="1525856974131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ProjectCase_test_create_project__1_.coverage" NAME="Unittest ProjectCase.test_create_project (1) Coverage Results" MODIFIED="1521108355201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/project" />
     <SUITE FILE_PATH="coverage/wllInterfaceTest$Unittests_in_test_User.coverage" NAME="Unittests in test_User Coverage Results" MODIFIED="1515577711146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/user" />
@@ -99,7 +110,7 @@
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_edit_partner.coverage" NAME="Unittest OrderCase.test_edit_partner Coverage Results" MODIFIED="1536742184113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_FollowList_002__1_.coverage" NAME="Unittest FollowCase.test_FollowList_002 (1) Coverage Results" MODIFIED="1532079267409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustormManagerCase_test_ownlist_Default.coverage" NAME="Unittest CustormManagerCase.test_ownlist_Default Coverage Results" MODIFIED="1525939695657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
-    <SUITE FILE_PATH="coverage/AppInterfaceTest$test.coverage" NAME="test Coverage Results" MODIFIED="1534407394523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$test.coverage" NAME="test Coverage Results" MODIFIED="1536895078139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/wllInterfaceTest$user.coverage" NAME="user Coverage Results" MODIFIED="1515641142465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/user" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustomerManagerCase_test_cus_saleactivity.coverage" NAME="Unittest CustomerManagerCase.test_cus_saleactivity Coverage Results" MODIFIED="1534316543989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittests_in_test_Sharesale.coverage" NAME="Unittests in test_Sharesale Coverage Results" MODIFIED="1515982857854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/sharesale" />
@@ -138,7 +149,7 @@
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_VisitCase_test_VisitList_customerType.coverage" NAME="Unittest VisitCase.test_VisitList_customerType Coverage Results" MODIFIED="1516242203152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/visit" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ProjectCase_test_my_list_001__1_.coverage" NAME="Unittest ProjectCase.test_my_list_001 (1) Coverage Results" MODIFIED="1521527996550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/project" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_CreateOder_O001__2_.coverage" NAME="Unittest OrderCase.test_CreateOder_O001 (2) Coverage Results" MODIFIED="1516692390157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
-    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittests_in_test_order.coverage" NAME="Unittests in test_order Coverage Results" MODIFIED="1536742393331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittests_in_test_order.coverage" NAME="Unittests in test_order Coverage Results" MODIFIED="1536916079091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustormManagerCase_test_edit_customer__1_.coverage" NAME="Unittest CustormManagerCase.test_edit_customer (1) Coverage Results" MODIFIED="1526279421805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$readConfig.coverage" NAME="readConfig Coverage Results" MODIFIED="1534320898130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/wllInterfaceTest$test_NewCustrom.coverage" NAME="test_NewCustrom Coverage Results" MODIFIED="1515484207604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/custorm" />
@@ -156,9 +167,10 @@
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ProjectCase_test_project_detail.coverage" NAME="Unittest ProjectCase.test_project_detail Coverage Results" MODIFIED="1521541975669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/project" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$get_Time_Type.coverage" NAME="get_Time_Type Coverage Results" MODIFIED="1522393240121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commom" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ChanceCase_test_MyChance_003.coverage" NAME="Unittest ChanceCase.test_MyChance_003 Coverage Results" MODIFIED="1519370753967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/chance" />
-    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_followList_005.coverage" NAME="Unittest FollowCase.test_followList_005 Coverage Results" MODIFIED="1532336603136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_followList_005.coverage" NAME="Unittest FollowCase.test_followList_005 Coverage Results" MODIFIED="1536911504390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittests_in_VisitCase__5_.coverage" NAME="Unittests in VisitCase (5) Coverage Results" MODIFIED="1516003242490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/visit" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_MyOrder_O002.coverage" NAME="Unittest OrderCase.test_MyOrder_O002 Coverage Results" MODIFIED="1534409837185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_pay.coverage" NAME="Unittest OrderCase.test_pay Coverage Results" MODIFIED="1536892785698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_WorkReportCase_test_Wreport_Search.coverage" NAME="Unittest WorkReportCase.test_Wreport_Search Coverage Results" MODIFIED="1516258508646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/workReport" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$attachments.coverage" NAME="attachments Coverage Results" MODIFIED="1527644512906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commom" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_UserCase_test_UserProfile__1_.coverage" NAME="Unittest UserCase.test_UserProfile (1) Coverage Results" MODIFIED="1516173454478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/user" />
@@ -180,7 +192,7 @@
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_create_follow_001.coverage" NAME="Unittest FollowCase.test_create_follow_001 Coverage Results" MODIFIED="1531980645414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_TeamOrder_O001.coverage" NAME="Unittest OrderCase.test_TeamOrder_O001 Coverage Results" MODIFIED="1534492387097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ProjectCase_test_create_project.coverage" NAME="Unittest ProjectCase.test_create_project Coverage Results" MODIFIED="1529637970470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/project" />
-    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ChanceCase_test_MyChance_001.coverage" NAME="Unittest ChanceCase.test_MyChance_001 Coverage Results" MODIFIED="1519289157710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/chance" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ChanceCase_test_MyChance_001.coverage" NAME="Unittest ChanceCase.test_MyChance_001 Coverage Results" MODIFIED="1536908297629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/chance" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ProjectCase_test_my_list_001.coverage" NAME="Unittest ProjectCase.test_my_list_001 Coverage Results" MODIFIED="1521597965255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/project" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustomerManagerCase_test_cus_project.coverage" NAME="Unittest CustomerManagerCase.test_cus_project Coverage Results" MODIFIED="1534316791322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittests_in_CustormManagerCase.coverage" NAME="Unittests in CustormManagerCase Coverage Results" MODIFIED="1526454639816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
@@ -196,7 +208,7 @@
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_Salesleades_test_TeamSaleslead.coverage" NAME="Unittest Salesleades.test_TeamSaleslead Coverage Results" MODIFIED="1516184844076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/salesleads" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustomerManagerCase_test_ownlist_Default.coverage" NAME="Unittest CustomerManagerCase.test_ownlist_Default Coverage Results" MODIFIED="1534317112499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_LinkOrder.coverage" NAME="Unittest OrderCase.test_LinkOrder Coverage Results" MODIFIED="1536661889017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
-    <SUITE FILE_PATH="coverage/AppInterfaceTest$runAll.coverage" NAME="runAll Coverage Results" MODIFIED="1536742451620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$runAll.coverage" NAME="runAll Coverage Results" MODIFIED="1536911669281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ProjectCase_test_createproject.coverage" NAME="Unittest ProjectCase.test_createproject Coverage Results" MODIFIED="1521100096234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/project" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$test_login.coverage" NAME="test_login Coverage Results" MODIFIED="1516171078477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/login" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustormManagerCase_test_Ownlist_search.coverage" NAME="Unittest CustormManagerCase.test_Ownlist_search Coverage Results" MODIFIED="1525853990576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
@@ -205,13 +217,14 @@
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustomerManagerCase_test_throw_sea_001.coverage" NAME="Unittest CustomerManagerCase.test_throw_sea_001 Coverage Results" MODIFIED="1534316939432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/wllInterfaceTest$Unittest_ShareSale_test_OpenUp_sahresale.coverage" NAME="Unittest ShareSale.test_OpenUp_sahresale Coverage Results" MODIFIED="1515568460503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/sharesale" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$follow.coverage" NAME="follow Coverage Results" MODIFIED="1531811323440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_owner.coverage" NAME="Unittest OrderCase.test_owner Coverage Results" MODIFIED="1536915891070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustomerManagerCase_test_contact.coverage" NAME="Unittest CustomerManagerCase.test_contact Coverage Results" MODIFIED="1526885495987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustomerManagerCase_test_cus_chance.coverage" NAME="Unittest CustomerManagerCase.test_cus_chance Coverage Results" MODIFIED="1527490054104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustormManagerCase_test_createCustomer.coverage" NAME="Unittest CustormManagerCase.test_createCustomer Coverage Results" MODIFIED="1526295085382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustormManagerCase_test_teamList_dept.coverage" NAME="Unittest CustormManagerCase.test_teamList_dept Coverage Results" MODIFIED="1525944050281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_FollList_LastSevenDay.coverage" NAME="Unittest FollowCase.test_FollList_LastSevenDay Coverage Results" MODIFIED="1516240387175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_FollowList_002.coverage" NAME="Unittest FollowCase.test_FollowList_002 Coverage Results" MODIFIED="1532079650130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
-    <SUITE FILE_PATH="coverage/AppInterfaceTest$user.coverage" NAME="user Coverage Results" MODIFIED="1536738868637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/user" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$user.coverage" NAME="user Coverage Results" MODIFIED="1536892498089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/user" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_ProjectCase_test_createproject__1_.coverage" NAME="Unittest ProjectCase.test_createproject (1) Coverage Results" MODIFIED="1521100186925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/project" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_VisitCase_test_VisitList.coverage" NAME="Unittest VisitCase.test_VisitList Coverage Results" MODIFIED="1516241809056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/visit" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_CreateOder_O001__1_.coverage" NAME="Unittest OrderCase.test_CreateOder_O001 (1) Coverage Results" MODIFIED="1516692379015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
@@ -246,6 +259,7 @@
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_FollowCase_test_similar_custlist__1_.coverage" NAME="Unittest FollowCase.test_similar_custlist (1) Coverage Results" MODIFIED="1531969685525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittests_in_FollowCase.coverage" NAME="Unittests in FollowCase Coverage Results" MODIFIED="1532335236969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/follow" />
     <SUITE FILE_PATH="coverage/wllInterfaceTest$Unittest_CustormManager_test_newCustorm__1_.coverage" NAME="Unittest CustormManager.test_newCustorm (1) Coverage Results" MODIFIED="1515485468098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/custorm" />
+    <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_OrderCase_test_pay__2_.coverage" NAME="Unittest OrderCase.test_pay (2) Coverage Results" MODIFIED="1536835465416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/order" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_CustomerManagerCase_test_ownlist_search.coverage" NAME="Unittest CustomerManagerCase.test_ownlist_search Coverage Results" MODIFIED="1534317271088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/customer" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittest_VisitCase_test_VisitList_Today.coverage" NAME="Unittest VisitCase.test_VisitList_Today Coverage Results" MODIFIED="1516241938659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/visit" />
     <SUITE FILE_PATH="coverage/AppInterfaceTest$Unittests_in_VisitCase__2_.coverage" NAME="Unittests in VisitCase (2) Coverage Results" MODIFIED="1516003347888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase/visit" />
@@ -279,8 +293,8 @@
       <file leaf-file-name="runAll.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runAll.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="606">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
               </folding>
@@ -291,19 +305,29 @@
       <file leaf-file-name="config" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+            <state relative-caret-position="402">
+              <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commonassert.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/commom/commonassert.py">
+      <file leaf-file-name="test_salesleads.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testCase/salesleads/test_salesleads.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
-              <folding />
+            <state relative-caret-position="247">
+              <caret line="103" column="91" selection-start-line="103" selection-start-column="91" selection-end-line="103" selection-end-column="91" />
+              <folding>
+                <element signature="e#326#1847#0" expanded="false" />
+                <element signature="e#1904#2389#0" expanded="false" />
+                <element signature="e#2445#3991#0" expanded="false" />
+                <element signature="e#2494#3326#0" expanded="false" />
+                <element signature="e#4048#5876#0" expanded="false" />
+                <element signature="e#4092#4283#0" expanded="false" />
+                <element signature="e#5933#7544#0" expanded="false" />
+                <element signature="e#6001#6095#0" expanded="false" />
+                <element signature="e#7588#9108#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -311,68 +335,61 @@
       <file leaf-file-name="order.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCase/order/order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            <state relative-caret-position="435">
+              <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
               <folding>
                 <element signature="e#103#449#0" expanded="false" />
                 <element signature="e#505#653#0" expanded="false" />
-                <element signature="e#1034#1184#0" expanded="false" />
-                <element signature="e#1245#1441#0" expanded="false" />
-                <element signature="e#1511#1668#0" expanded="false" />
-                <element signature="e#1726#1876#0" expanded="false" />
-                <element signature="e#1931#2074#0" expanded="false" />
-                <element signature="e#2118#2249#0" expanded="false" />
+                <element signature="e#723#978#0" expanded="false" />
+                <element signature="e#1036#1186#0" expanded="false" />
+                <element signature="e#1247#1443#0" expanded="false" />
+                <element signature="e#1513#1670#0" expanded="false" />
+                <element signature="e#1728#1878#0" expanded="false" />
+                <element signature="e#1933#2076#0" expanded="false" />
+                <element signature="e#2120#2251#0" expanded="false" />
+                <element signature="e#2299#2440#0" expanded="false" />
+                <element signature="e#2489#2631#0" expanded="false" />
+                <element signature="e#2682#2824#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_order.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_order.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testCase/order/test_order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="299" column="34" selection-start-line="299" selection-start-column="34" selection-end-line="299" selection-end-column="34" />
+            <state relative-caret-position="394">
+              <caret line="381" column="27" selection-start-line="381" selection-start-column="27" selection-end-line="381" selection-end-column="27" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
-                <element signature="e#306#477#0" expanded="false" />
-                <element signature="e#606#1593#0" expanded="false" />
-                <element signature="e#1655#2713#0" expanded="false" />
-                <element signature="e#1696#1899#0" expanded="false" />
-                <element signature="e#2771#3831#0" expanded="false" />
-                <element signature="e#2812#3061#0" expanded="false" />
-                <element signature="e#3883#5246#0" expanded="false" />
-                <element signature="e#5290#5737#0" expanded="false" />
-                <element signature="e#5317#5520#0" expanded="false" />
-                <element signature="e#5792#6518#0" expanded="false" />
-                <element signature="e#5820#6023#0" expanded="false" />
-                <element signature="e#6090#6197#0" expanded="false" />
-                <element signature="e#6575#9253#0" expanded="false" />
-                <element signature="e#7290#7540#0" expanded="false" />
-                <element signature="e#9320#10226#0" expanded="false" />
-                <element signature="e#9351#9507#0" expanded="false" />
-                <element signature="e#10306#11348#0" expanded="false" />
-                <element signature="e#10335#10542#0" expanded="false" />
-                <element signature="e#11403#12495#0" expanded="false" />
-                <element signature="e#11436#11639#0" expanded="false" />
-                <element signature="e#12544#12625#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testCase/user/user.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-              <folding>
-                <element signature="e#615#737#0" expanded="false" />
-                <element signature="e#795#1176#0" expanded="false" />
-                <element signature="e#1233#1646#0" expanded="false" />
-                <element signature="e#1719#2305#0" expanded="false" />
-                <element signature="e#2370#3021#0" expanded="false" />
-                <element signature="e#3085#3720#0" expanded="false" />
-                <element signature="e#3945#4250#0" expanded="false" />
+                <element signature="e#370#541#0" expanded="false" />
+                <element signature="e#670#1657#0" expanded="false" />
+                <element signature="e#1719#2777#0" expanded="false" />
+                <element signature="e#1760#1963#0" expanded="false" />
+                <element signature="e#2835#3895#0" expanded="false" />
+                <element signature="e#2876#3125#0" expanded="false" />
+                <element signature="e#3947#5310#0" expanded="false" />
+                <element signature="e#5354#5801#0" expanded="false" />
+                <element signature="e#5381#5584#0" expanded="false" />
+                <element signature="e#5856#6582#0" expanded="false" />
+                <element signature="e#5884#6087#0" expanded="false" />
+                <element signature="e#6639#9317#0" expanded="false" />
+                <element signature="e#7184#8800#0" expanded="false" />
+                <element signature="e#7354#7604#0" expanded="false" />
+                <element signature="e#9384#10290#0" expanded="false" />
+                <element signature="e#9415#9571#0" expanded="false" />
+                <element signature="e#10370#11412#0" expanded="false" />
+                <element signature="e#10399#10606#0" expanded="false" />
+                <element signature="e#11467#12559#0" expanded="false" />
+                <element signature="e#11500#11703#0" expanded="false" />
+                <element signature="e#12608#12689#0" expanded="false" />
+                <element signature="e#12736#13949#0" expanded="false" />
+                <element signature="e#12765#12968#0" expanded="false" />
+                <element signature="e#13991#14977#0" expanded="false" />
+                <element signature="e#13999#14202#0" expanded="false" />
+                <element signature="e#14274#14702#0" expanded="false" />
+                <element signature="e#15019#15544#0" expanded="false" />
+                <element signature="e#15027#15230#0" expanded="false" />
+                <element signature="e#15297#15434#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -416,7 +433,6 @@
         <option value="$PROJECT_DIR$/testCase/chance/chance.py" />
         <option value="$PROJECT_DIR$/testCase/bulletin/test_bulletin.py" />
         <option value="$PROJECT_DIR$/testCase/login/test_login.py" />
-        <option value="$PROJECT_DIR$/commom/attachments.py" />
         <option value="$PROJECT_DIR$/commom/Excel_rd.py" />
         <option value="$PROJECT_DIR$/testCase/project/test_project.py" />
         <option value="$PROJECT_DIR$/testCase/visit/visit.py" />
@@ -425,10 +441,7 @@
         <option value="$PROJECT_DIR$/testCase/salesleads/__init__.py" />
         <option value="$PROJECT_DIR$/testCase/salesleads/salesleads.py" />
         <option value="$PROJECT_DIR$/commom/get_Time_Type.py" />
-        <option value="$PROJECT_DIR$/testCase/follow/test_follow.py" />
         <option value="$PROJECT_DIR$/testCase/follow/follow.py" />
-        <option value="$PROJECT_DIR$/testCase/chance/test_chance.py" />
-        <option value="$PROJECT_DIR$/testCase/salesleads/test_salesleads.py" />
         <option value="$PROJECT_DIR$/testCase/wfinstance/test_wfinstance.py" />
         <option value="$PROJECT_DIR$/testCase/visit/test_visit.py" />
         <option value="$PROJECT_DIR$/testCase/assert.py" />
@@ -436,14 +449,18 @@
         <option value="$PROJECT_DIR$/readConfig.py" />
         <option value="$PROJECT_DIR$/testCase/customer/test_customerManager.py" />
         <option value="$PROJECT_DIR$/testCase/sharesale/test_sharesale.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/testCase/product/product.py" />
         <option value="$PROJECT_DIR$/commom/commonassert.py" />
-        <option value="$PROJECT_DIR$/testCase/user/user.py" />
-        <option value="$PROJECT_DIR$/testCase/order/order.py" />
-        <option value="$PROJECT_DIR$/testCase/order/test_order.py" />
         <option value="$PROJECT_DIR$/runAll.py" />
+        <option value="$PROJECT_DIR$/commom/attachments.py" />
+        <option value="$PROJECT_DIR$/testCase/user/user.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/testCase/chance/test_chance.py" />
+        <option value="$PROJECT_DIR$/testCase/follow/test_follow.py" />
+        <option value="$PROJECT_DIR$/testCase/salesleads/test_salesleads.py" />
         <option value="$PROJECT_DIR$/config" />
+        <option value="$PROJECT_DIR$/testCase/order/test_order.py" />
+        <option value="$PROJECT_DIR$/testCase/order/order.py" />
       </list>
     </option>
   </component>
@@ -510,6 +527,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -556,7 +575,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
+              <option name="myItemId" value="salesleads" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -570,18 +589,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="testCase" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="order" />
+              <option name="myItemId" value="commom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -591,76 +604,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
   </component>
-  <component name="RunManager" selected="Python.runAll">
-    <configuration default="false" name="Unittest OrderCase.test_edit_partner" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCase/order" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="appIFTest" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCase/order/test_order.py" />
-      <option name="CLASS_NAME" value="OrderCase" />
-      <option name="METHOD_NAME" value="test_edit_partner" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest OrderCase.test_edit_partner (3)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCase/order" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="appIFTest" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCase/order/test_order.py" />
-      <option name="CLASS_NAME" value="OrderCase" />
-      <option name="METHOD_NAME" value="test_edit_partner" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest OrderCase.test_detail" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCase/order" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="appIFTest" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCase/order/test_order.py" />
-      <option name="CLASS_NAME" value="OrderCase" />
-      <option name="METHOD_NAME" value="test_detail" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests in test_order">
     <configuration default="false" name="runAll" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -677,6 +621,75 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runAll.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest FollowCase.test_followList_001" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCase/follow" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="appIFTest" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCase/follow/test_follow.py" />
+      <option name="CLASS_NAME" value="FollowCase" />
+      <option name="METHOD_NAME" value="test_followList_001" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest FollowCase.test_followList_005" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCase/follow" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="appIFTest" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCase/follow/test_follow.py" />
+      <option name="CLASS_NAME" value="FollowCase" />
+      <option name="METHOD_NAME" value="test_followList_005" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest OrderCase.test_owner" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCase/order" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="appIFTest" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCase/order/test_order.py" />
+      <option name="CLASS_NAME" value="OrderCase" />
+      <option name="METHOD_NAME" value="test_owner" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="Unittests in test_order" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -930,19 +943,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.test_customerManager" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest OrderCase.test_edit_partner" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest OrderCase.test_edit_partner (3)" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest OrderCase.test_detail" />
-      <item index="4" class="java.lang.String" itemvalue="Python.runAll" />
+      <item index="1" class="java.lang.String" itemvalue="Python.runAll" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest FollowCase.test_followList_001" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest FollowCase.test_followList_005" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest OrderCase.test_owner" />
       <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in test_order" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.runAll" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_order" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest OrderCase.test_edit_partner" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest OrderCase.test_detail" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest OrderCase.test_edit_partner (3)" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_order" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest OrderCase.test_owner" />
+        <item index="2" class="java.lang.String" itemvalue="Python.runAll" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest FollowCase.test_followList_005" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest FollowCase.test_followList_001" />
       </list>
     </recent_temporary>
   </component>
@@ -963,39 +976,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_OrderCase_test_detail - 2018.09.12 at 16h 37m 00s.xml">
-      <configuration name="Unittest OrderCase.test_detail" configurationId="tests" />
+    <history-entry file="Unittest_FollowCase_test_followList_001 - 2018.09.14 at 15h 43m 05s.xml">
+      <configuration name="Unittest FollowCase.test_followList_001" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_OrderCase_test_detail - 2018.09.12 at 16h 38m 02s.xml">
-      <configuration name="Unittest OrderCase.test_detail" configurationId="tests" />
+    <history-entry file="Unittest_FollowCase_test_followList_005 - 2018.09.14 at 15h 43m 32s.xml">
+      <configuration name="Unittest FollowCase.test_followList_005" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_OrderCase_test_detail - 2018.09.12 at 16h 40m 08s.xml">
-      <configuration name="Unittest OrderCase.test_detail" configurationId="tests" />
+    <history-entry file="Unittest_FollowCase_test_followList_005 - 2018.09.14 at 15h 43m 58s.xml">
+      <configuration name="Unittest FollowCase.test_followList_005" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_OrderCase_test_detail - 2018.09.12 at 16h 40m 38s.xml">
-      <configuration name="Unittest OrderCase.test_detail" configurationId="tests" />
+    <history-entry file="Unittest_FollowCase_test_followList_005 - 2018.09.14 at 15h 49m 31s.xml">
+      <configuration name="Unittest FollowCase.test_followList_005" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_OrderCase_test_detail - 2018.09.12 at 16h 41m 02s.xml">
-      <configuration name="Unittest OrderCase.test_detail" configurationId="tests" />
+    <history-entry file="Unittest_FollowCase_test_followList_005 - 2018.09.14 at 15h 50m 26s.xml">
+      <configuration name="Unittest FollowCase.test_followList_005" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_OrderCase_test_edit_partner - 2018.09.12 at 16h 48m 42s.xml">
-      <configuration name="Unittest OrderCase.test_edit_partner" configurationId="tests" />
+    <history-entry file="Unittest_FollowCase_test_followList_005 - 2018.09.14 at 15h 51m 47s.xml">
+      <configuration name="Unittest FollowCase.test_followList_005" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_OrderCase_test_edit_partner - 2018.09.12 at 16h 49m 14s.xml">
-      <configuration name="Unittest OrderCase.test_edit_partner" configurationId="tests" />
+    <history-entry file="Unittest_OrderCase_test_owner - 2018.09.14 at 17h 03m 14s.xml">
+      <configuration name="Unittest OrderCase.test_owner" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_OrderCase_test_edit_partner - 2018.09.12 at 16h 49m 47s.xml">
-      <configuration name="Unittest OrderCase.test_edit_partner" configurationId="tests" />
+    <history-entry file="Unittest_OrderCase_test_owner - 2018.09.14 at 17h 03m 43s.xml">
+      <configuration name="Unittest OrderCase.test_owner" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_order - 2018.09.12 at 16h 51m 43s.xml">
-      <configuration name="Unittests in test_order" configurationId="tests" />
+    <history-entry file="Unittest_OrderCase_test_owner - 2018.09.14 at 17h 04m 53s.xml">
+      <configuration name="Unittest OrderCase.test_owner" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_order - 2018.09.12 at 16h 53m 48s.xml">
+    <history-entry file="Unittests_in_test_order - 2018.09.14 at 17h 08m 37s.xml">
       <configuration name="Unittests in test_order" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.128125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1004,12 +1017,12 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3689218" sideWeight="0.49583334" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3689218" sideWeight="0.49583334" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1061,7 +1074,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/testCase/user/user.py</url>
-          <line>92</line>
+          <line>94</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1166,8 +1179,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/testCase/order/test_order.py</url>
-          <line>45</line>
+          <line>47</line>
           <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/testCase/order/order.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/testCase/user/user.py</url>
+          <line>122</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -1180,7 +1203,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1347,13 +1370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testCase/salesleads/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -1361,77 +1377,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commom/attachments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testCase/salesleads/salesleads.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/follow/test_follow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="470" column="81" selection-start-line="470" selection-start-column="81" selection-end-line="470" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#35#0" expanded="false" />
-            <element signature="e#618#2624#0" expanded="false" />
-            <element signature="e#656#874#0" expanded="false" />
-            <element signature="e#2690#3678#0" expanded="false" />
-            <element signature="e#3736#6718#0" expanded="false" />
-            <element signature="e#4738#4866#0" expanded="false" />
-            <element signature="e#5216#5749#0" expanded="false" />
-            <element signature="e#5759#5974#1" expanded="false" />
-            <element signature="e#6782#8374#0" expanded="false" />
-            <element signature="e#8442#10927#0" expanded="false" />
-            <element signature="e#10996#13682#0" expanded="false" />
-            <element signature="e#13757#17245#0" expanded="false" />
-            <element signature="e#13843#14414#0" expanded="false" />
-            <element signature="e#17323#20163#0" expanded="false" />
-            <element signature="e#17445#17901#0" expanded="false" />
-            <element signature="e#20223#23822#0" expanded="false" />
-            <element signature="e#20300#20484#0" expanded="false" />
-            <element signature="e#23888#24299#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/chance/test_chance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding>
-            <element signature="e#283#451#0" expanded="false" />
-            <element signature="e#513#2145#0" expanded="false" />
-            <element signature="e#2206#3132#0" expanded="false" />
-            <element signature="e#3199#4654#0" expanded="false" />
-            <element signature="e#4721#6060#0" expanded="false" />
-            <element signature="e#6139#7075#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/salesleads/test_salesleads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
-          <folding>
-            <element signature="e#326#1843#0" expanded="false" />
-            <element signature="e#1900#2385#0" expanded="false" />
-            <element signature="e#2441#3987#0" expanded="false" />
-            <element signature="e#2490#3322#0" expanded="false" />
-            <element signature="e#4044#5872#0" expanded="false" />
-            <element signature="e#4088#4279#0" expanded="false" />
-            <element signature="e#5929#7540#0" expanded="false" />
-            <element signature="e#5997#6091#0" expanded="false" />
-            <element signature="e#7584#9104#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1557,46 +1506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/user/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-          <folding>
-            <element signature="e#615#737#0" expanded="false" />
-            <element signature="e#795#1176#0" expanded="false" />
-            <element signature="e#1233#1646#0" expanded="false" />
-            <element signature="e#1719#2305#0" expanded="false" />
-            <element signature="e#2370#3021#0" expanded="false" />
-            <element signature="e#3085#3720#0" expanded="false" />
-            <element signature="e#3945#4250#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/order/order.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="e#103#449#0" expanded="false" />
-            <element signature="e#505#653#0" expanded="false" />
-            <element signature="e#1034#1184#0" expanded="false" />
-            <element signature="e#1245#1441#0" expanded="false" />
-            <element signature="e#1511#1668#0" expanded="false" />
-            <element signature="e#1726#1876#0" expanded="false" />
-            <element signature="e#1931#2074#0" expanded="false" />
-            <element signature="e#2118#2249#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readConfig.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1609,52 +1518,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runAll.py">
+    <entry file="file://$PROJECT_DIR$/commom/attachments.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="399">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/user/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="88" column="85" selection-start-line="88" selection-start-column="85" selection-end-line="88" selection-end-column="85" />
           <folding>
-            <element signature="e#15#30#0" expanded="true" />
+            <element signature="e#615#737#0" expanded="false" />
+            <element signature="e#795#1176#0" expanded="false" />
+            <element signature="e#1233#1646#0" expanded="false" />
+            <element signature="e#1719#2305#0" expanded="false" />
+            <element signature="e#3226#3861#0" expanded="false" />
+            <element signature="e#4086#4391#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/order/test_order.py">
+    <entry file="file://$PROJECT_DIR$/test2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="299" column="34" selection-start-line="299" selection-start-column="34" selection-end-line="299" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#306#477#0" expanded="false" />
-            <element signature="e#606#1593#0" expanded="false" />
-            <element signature="e#1655#2713#0" expanded="false" />
-            <element signature="e#1696#1899#0" expanded="false" />
-            <element signature="e#2771#3831#0" expanded="false" />
-            <element signature="e#2812#3061#0" expanded="false" />
-            <element signature="e#3883#5246#0" expanded="false" />
-            <element signature="e#5290#5737#0" expanded="false" />
-            <element signature="e#5317#5520#0" expanded="false" />
-            <element signature="e#5792#6518#0" expanded="false" />
-            <element signature="e#5820#6023#0" expanded="false" />
-            <element signature="e#6090#6197#0" expanded="false" />
-            <element signature="e#6575#9253#0" expanded="false" />
-            <element signature="e#7290#7540#0" expanded="false" />
-            <element signature="e#9320#10226#0" expanded="false" />
-            <element signature="e#9351#9507#0" expanded="false" />
-            <element signature="e#10306#11348#0" expanded="false" />
-            <element signature="e#10335#10542#0" expanded="false" />
-            <element signature="e#11403#12495#0" expanded="false" />
-            <element signature="e#11436#11639#0" expanded="false" />
-            <element signature="e#12544#12625#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+        <state relative-caret-position="152">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/chance/test_chance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
+          <folding>
+            <element signature="e#283#451#0" expanded="false" />
+            <element signature="e#513#2145#0" expanded="false" />
+            <element signature="e#3199#4682#0" expanded="false" />
+            <element signature="e#4749#6088#0" expanded="false" />
+            <element signature="e#6167#7103#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#20#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/follow/test_follow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+          <folding>
+            <element signature="e#618#2624#0" expanded="false" />
+            <element signature="e#656#874#0" expanded="false" />
+            <element signature="e#2690#3678#0" expanded="false" />
+            <element signature="e#3736#6718#0" expanded="false" />
+            <element signature="e#4738#4866#0" expanded="false" />
+            <element signature="e#5216#5749#0" expanded="false" />
+            <element signature="e#5759#5974#1" expanded="false" />
+            <element signature="e#6782#8374#0" expanded="false" />
+            <element signature="e#8442#10927#0" expanded="false" />
+            <element signature="e#8562#9043#0" expanded="false" />
+            <element signature="e#10996#13682#0" expanded="false" />
+            <element signature="e#13757#17245#0" expanded="false" />
+            <element signature="e#13843#14414#0" expanded="false" />
+            <element signature="e#17323#20163#0" expanded="false" />
+            <element signature="e#17445#17901#0" expanded="false" />
+            <element signature="e#20223#23926#0" expanded="false" />
+            <element signature="e#20300#20484#0" expanded="false" />
+            <element signature="e#23992#24403#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1663,6 +1604,101 @@
         <state relative-caret-position="209">
           <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/salesleads/test_salesleads.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="103" column="91" selection-start-line="103" selection-start-column="91" selection-end-line="103" selection-end-column="91" />
+          <folding>
+            <element signature="e#326#1847#0" expanded="false" />
+            <element signature="e#1904#2389#0" expanded="false" />
+            <element signature="e#2445#3991#0" expanded="false" />
+            <element signature="e#2494#3326#0" expanded="false" />
+            <element signature="e#4048#5876#0" expanded="false" />
+            <element signature="e#4092#4283#0" expanded="false" />
+            <element signature="e#5933#7544#0" expanded="false" />
+            <element signature="e#6001#6095#0" expanded="false" />
+            <element signature="e#7588#9108#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/order/order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
+          <folding>
+            <element signature="e#103#449#0" expanded="false" />
+            <element signature="e#505#653#0" expanded="false" />
+            <element signature="e#723#978#0" expanded="false" />
+            <element signature="e#1036#1186#0" expanded="false" />
+            <element signature="e#1247#1443#0" expanded="false" />
+            <element signature="e#1513#1670#0" expanded="false" />
+            <element signature="e#1728#1878#0" expanded="false" />
+            <element signature="e#1933#2076#0" expanded="false" />
+            <element signature="e#2120#2251#0" expanded="false" />
+            <element signature="e#2299#2440#0" expanded="false" />
+            <element signature="e#2489#2631#0" expanded="false" />
+            <element signature="e#2682#2824#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/order/test_order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="381" column="27" selection-start-line="381" selection-start-column="27" selection-end-line="381" selection-end-column="27" />
+          <folding>
+            <element signature="e#370#541#0" expanded="false" />
+            <element signature="e#670#1657#0" expanded="false" />
+            <element signature="e#1719#2777#0" expanded="false" />
+            <element signature="e#1760#1963#0" expanded="false" />
+            <element signature="e#2835#3895#0" expanded="false" />
+            <element signature="e#2876#3125#0" expanded="false" />
+            <element signature="e#3947#5310#0" expanded="false" />
+            <element signature="e#5354#5801#0" expanded="false" />
+            <element signature="e#5381#5584#0" expanded="false" />
+            <element signature="e#5856#6582#0" expanded="false" />
+            <element signature="e#5884#6087#0" expanded="false" />
+            <element signature="e#6639#9317#0" expanded="false" />
+            <element signature="e#7184#8800#0" expanded="false" />
+            <element signature="e#7354#7604#0" expanded="false" />
+            <element signature="e#9384#10290#0" expanded="false" />
+            <element signature="e#9415#9571#0" expanded="false" />
+            <element signature="e#10370#11412#0" expanded="false" />
+            <element signature="e#10399#10606#0" expanded="false" />
+            <element signature="e#11467#12559#0" expanded="false" />
+            <element signature="e#11500#11703#0" expanded="false" />
+            <element signature="e#12608#12689#0" expanded="false" />
+            <element signature="e#12736#13949#0" expanded="false" />
+            <element signature="e#12765#12968#0" expanded="false" />
+            <element signature="e#13991#14977#0" expanded="false" />
+            <element signature="e#13999#14202#0" expanded="false" />
+            <element signature="e#14274#14702#0" expanded="false" />
+            <element signature="e#15019#15544#0" expanded="false" />
+            <element signature="e#15027#15230#0" expanded="false" />
+            <element signature="e#15297#15434#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

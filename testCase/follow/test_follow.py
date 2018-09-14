@@ -400,7 +400,7 @@ class FollowCase(unittest.TestCase):
 
     # 快速记录列表搜索
     def test_followList_005(self):
-        """快速记录列表搜索跟进内容/跟进对象/联系人：关键字'测试'"""
+        """快速记录列表搜索跟进内容/跟进对象/联系人：关键字'李白'"""
         key_words = "李白"
         param = {
             "keyWords": key_words,
@@ -423,8 +423,8 @@ class FollowCase(unittest.TestCase):
         first_at = records[0]["createAt"]
         for fol in records:
             if fol["customerType"] == 0:      # customerType客户类型 0.销售线索 1.开发客户 2.签约客户
-                self.assertTrue(param["keyWords"] in fol["content"] or param["keyWords"] in fol["contactName"],
-                                msg=fol)
+                self.assertTrue(param["keyWords"] in fol["content"] or param["keyWords"] in fol["contactName"]
+                                or param["keyWords"] in fol["salesleadCompanyName"], msg=fol)
             elif (fol["customerType"] == 1 or fol["customerType"] == 2) and "contactName" in fol:
                 self.assertTrue(param["keyWords"] in fol["content"] or param["keyWords"] in fol["contactName"] or
                                 param["keyWords"] in fol["customerName"], msg=fol)
@@ -446,8 +446,8 @@ class FollowCase(unittest.TestCase):
                 actual_total += len(page_records)
                 for fol in page_records:
                     if fol["customerType"] == 0:  # customerType客户类型 0.销售线索 1.开发客户 2.签约客户
-                        self.assertTrue(param["keyWords"] in fol["content"] or param["keyWords"] in fol["contactName"],
-                                        msg=fol)
+                        self.assertTrue(param["keyWords"] in fol["content"] or param["keyWords"] in fol["contactName"]
+                                        or param["keyWords"] in fol["salesleadCompanyName"], msg=fol)
                     elif (fol["customerType"] == 1 or fol["customerType"] == 2) and "contactName" in fol:
                         self.assertTrue(param["keyWords"] in fol["content"] or param["keyWords"] in fol["contactName"]
                                         or param["keyWords"] in fol["customerName"], msg=fol)

@@ -13,8 +13,8 @@ class TimeTest(object):
         print("000")
         return time.strftime("%H:%M:%S", time.localtime())
     @classmethod
-    def add(cls,hour,minute, se):
-        t1= cls(hour=hour,minute=minute,second=se)
+    def add(cls, hour, minute, se):
+        t1 = cls(hour=hour, minute=minute, second=se)
         return t1
     def jian(self):
         print("222")
@@ -34,7 +34,9 @@ def a(x):
 def b(y, fuc):
     return y+fuc(y)
 
-n=3
-print(b(n,a))
+n = 3
+# print(b(n,a))
 
 
+if __name__ == "__main__":
+    print(str(datetime.now()))

@@ -69,7 +69,7 @@ class User(object):
         return deptusersId
 
     # 根据用户名获取某个人员的信息
-    def get_User(self, username):
+    def get_User(self, username, is_dept=False):
         r = self.get_Organization()
         if r.status_code != 200:
             return None
@@ -85,6 +85,8 @@ class User(object):
                 if user_response['name'] == username:
                     user["id"] = user_response["id"]
                     user["avatar"] = user_response["avatar"]
+                    if is_dept is True:
+                        user["depts"] = user_response["depts"]      # 有些地方获取人员不需要部门信息
                     break
                 n += 1
         return user

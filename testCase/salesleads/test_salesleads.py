@@ -14,7 +14,7 @@ class Salesleades(unittest.TestCase):
     def test_NewSaleslead(self):
         """测试新建线索用例：正常新建线索"""
         name = "线索" + time.strftime('%Y-%m-%d %H:%M', time.localtime(time.time()))
-        companyname='四川'+'有限公司'+str(random.randint(1, 200))
+        companyname='四川'+'有限公司'+str(random.randint(200, 10000))
         salelead_request = {
             "status": 1,
             "address": "人民南路地铁站",

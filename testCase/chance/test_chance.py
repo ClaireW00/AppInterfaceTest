@@ -81,32 +81,32 @@ class ChanceCase(unittest.TestCase):
     def test_MyChance_002(self):
         '''我的机会列表：按照最高金额排序'''
 
-        self.param['sortType']=3  #3表示按照最高金额排序
-        result=self.cha.myChance(self.param)
-        self.assertEqual(result.status_code,200)
+        self.param['sortType'] = 3    # 3表示按照最高金额排序
+        result = self.cha.myChance(self.param)
+        self.assertEqual(result.status_code, 200)
         result_json=result.json()
         self.assertTrue('totalRecords'in result_json)
         totalRecords=result_json['totalRecords']
-        records=result_json['records']
-        actualTotal=len(records)#实际返回数据数量
-        if totalRecords>=0:
-            firstAmount=records[0]['estimatedAmount']  #取第一条数据的金额
-        #判断按最高金额倒叙
+        records = result_json['records']
+        actualTotal=len(records)    # 实际返回数据数量
+        if totalRecords >= 0:
+            firstAmount=records[0]['estimatedAmount']  # 取第一条数据的金额
+        # 判断按最高金额倒叙
         for re in records:
-            self.assertTrue(firstAmount>=re['estimatedAmount'],msg=re['name'])#排序错误时，打印出数据的名称
+            self.assertTrue(firstAmount>=re['estimatedAmount'],msg=re['name'])  # 排序错误时，打印出数据的名称
             firstAmount=re['estimatedAmount']
 
-        #获取第一页以后的数据并计算长度
+        # 获取第一页以后的数据并计算长度
         if totalRecords>self.param['pageSize']:
             page=math.ceil(totalRecords/self.param['pageSize'])
             for p in range(2,page+1):
                 self.param['pageIndex']=p
                 pageresult=self.cha.myChance(self.param)
-                self.assertEqual(pageresult.status_code,200,msg=p)   #翻页获取数据出错时，打印出出错的页数
+                self.assertEqual(pageresult.status_code,200,msg=p)   # 翻页获取数据出错时，打印出出错的页数
                 pageRecords=pageresult.json()['records']
                 actualTotal=actualTotal+len(pageRecords)
-                for pRe in pageRecords:#判断翻页数据按金额排序是否正确
-                    self.assertTrue(firstAmount>=pRe['estimatedAmount'], msg=pRe)  # 排序错误时，打印出数据的名称
+                for pRe in pageRecords: # 判断翻页数据按金额排序是否正确
+                    self.assertTrue(firstAmount >= pRe['estimatedAmount'], msg=pRe)  # 排序错误时，打印出数据的名称
                     firstAmount = pRe['estimatedAmount']
         self.assertEqual(totalRecords, actualTotal, msg=actualTotal)  # 判断返回的数据总数与数据数量是否一致,错误时返回实际数据数量
 

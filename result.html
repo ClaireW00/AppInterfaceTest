@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>KuaiQi Test Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-09-12 16:54:13</p>
-<p class='attribute'><strong>Duration:</strong> 0:03:53.772000</p>
-<p class='attribute'><strong>Status:</strong> Pass 86 Failure 1 Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-09-14 15:54:30</p>
+<p class='attribute'><strong>Duration:</strong> 0:06:41.775000</p>
+<p class='attribute'><strong>Status:</strong> Pass 90</p>
 
 <p class='description'>测试用例执行明细</p>
 </div>
@@ -489,11 +489,11 @@ pt3.26:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr class='failClass'>
+<tr class='passClass'>
     <td>follow.test_follow.FollowCase</td>
     <td>10</td>
-    <td>9</td>
-    <td>1</td>
+    <td>10</td>
+    <td>0</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c4',10)">Detail</a></td>
 </tr>
@@ -604,30 +604,22 @@ pt4.6:
     </td>
 </tr>
 
-<tr id='ft4.7' class='none'>
-    <td class='failCase'><div class='testcase'>test_followList_005: 快速记录列表搜索跟进内容/跟进对象/联系人：关键字'测试'</div></td>
+<tr id='pt4.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_followList_005: 快速记录列表搜索跟进内容/跟进对象/联系人：关键字'李白'</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.7')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.7')" >
+        pass</a>
 
-    <div id='div_ft4.7' class="popup_window">
+    <div id='div_pt4.7' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.7').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.7').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft4.7: Traceback (most recent call last):
-  File "C:\Users\Administrator\AppInterfaceTest\testCase\follow\test_follow.py", line 427, in test_followList_005
-    msg=fol)
-AssertionError: False is not true : {'creatorId': '590aebdbe44c366eaf00009e', 'contactName': '啦啦啦', 'comments': [{'creatorId': '590aebdbe44c366eaf00009e', 'creatorAvatar': '', 'title': '记得记得你爸爸', 'bizzId': '5b55997ed535cf469d2e1bf1', 'commentType': 1, 'creatorName': '布莱尔', 'id': '5b559a85dbf3ec3008e09dc0', 'createdAt': 1532336773, 'bizzType': 2, 'companyId': '57d6333cd33c65554d805131'}], 'statusType': 0, 'avatar': 'https://ufiles.ukuaiqi.com/88d3d0e2-0bef-4f47-bd9f-491153fdb1e8/IMG_1596.JPG', 'customerId': '5b643625d535cf05daaf8d71', 'location': {'addr': '', 'loc': None}, 'sealsleadId': '5b559977dbf3ec3008e0969f', 'createdAt': 1532336510, 'audioUrl': '', 'uuid': '4924A23E-8E7F-4E19-971A-B900929AC39C', 'attachments': [], 'isOverTime': False, 'imgAttachments': [], 'createAt': 1532336510, 'typeName': '短信', 'weixinExtFields': None, 'customerType': 0, 'id': '5b55997ed535cf469d2e1bf1', 'visitType': 2, 'audioLength': 0, 'creatorName': '布莱尔', 'typeId': '57d67215d33c653e3e0051f2', 'isSync': False, 'addr': '', 'contactPhone': '13512345673', 'atNameAndDepts': '', 'content': '那些拿电脑的呢', 'extFields': {}, 'salesleadCompanyName': '公司李白销售', 'isRemark': True, 'audioInfo': []}
-Traceback (most recent call last):
-  File "C:\Users\Administrator\AppInterfaceTest\testCase\follow\test_follow.py", line 427, in test_followList_005
-    msg=fol)
-AssertionError: False is not true : {'creatorId': '590aebdbe44c366eaf00009e', 'contactName': '啦啦啦', 'comments': [{'creatorId': '590aebdbe44c366eaf00009e', 'creatorAvatar': '', 'title': '记得记得你爸爸', 'bizzId': '5b55997ed535cf469d2e1bf1', 'commentType': 1, 'creatorName': '布莱尔', 'id': '5b559a85dbf3ec3008e09dc0', 'createdAt': 1532336773, 'bizzType': 2, 'companyId': '57d6333cd33c65554d805131'}], 'statusType': 0, 'avatar': 'https://ufiles.ukuaiqi.com/88d3d0e2-0bef-4f47-bd9f-491153fdb1e8/IMG_1596.JPG', 'customerId': '5b643625d535cf05daaf8d71', 'location': {'addr': '', 'loc': None}, 'sealsleadId': '5b559977dbf3ec3008e0969f', 'createdAt': 1532336510, 'audioUrl': '', 'uuid': '4924A23E-8E7F-4E19-971A-B900929AC39C', 'attachments': [], 'isOverTime': False, 'imgAttachments': [], 'createAt': 1532336510, 'typeName': '短信', 'weixinExtFields': None, 'customerType': 0, 'id': '5b55997ed535cf469d2e1bf1', 'visitType': 2, 'audioLength': 0, 'creatorName': '布莱尔', 'typeId': '57d67215d33c653e3e0051f2', 'isSync': False, 'addr': '', 'contactPhone': '13512345673', 'atNameAndDepts': '', 'content': '那些拿电脑的呢', 'extFields': {}, 'salesleadCompanyName': '公司李白销售', 'isRemark': True, 'audioInfo': []}
-
+pt4.7: 
 
         </pre>
     </div>
@@ -694,13 +686,13 @@ pt4.10:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>order.test_order.OrderCase</td>
-    <td>10</td>
-    <td>9</td>
+    <td>12</td>
+    <td>12</td>
     <td>0</td>
-    <td>1</td>
-    <td><a href="javascript:showClassDetail('c6',10)">Detail</a></td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',12)">Detail</a></td>
 </tr>
 
 <tr id='pt6.1' class='hiddenRow'>
@@ -852,40 +844,9 @@ pt6.7:
     </td>
 </tr>
 
-<tr id='ft6.8' class='none'>
-    <td class='errorCase'><div class='testcase'>test_detail: 订单详情</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.8')" >
-        error</a>
-
-    <div id='div_ft6.8' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.8').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft6.8: Traceback (most recent call last):
-  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 133, in test_detail
-    order_id = self.ord.get_order(param)["id"]
-  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\order.py", line 30, in get_order
-    ordmes = records[random.randint(0, len(records))]  # 符合条件的任意一个订单
-IndexError: list index out of range
-Traceback (most recent call last):
-  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 133, in test_detail
-    order_id = self.ord.get_order(param)["id"]
-  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\order.py", line 30, in get_order
-    ordmes = records[random.randint(0, len(records))]  # 符合条件的任意一个订单
-IndexError: list index out of range
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
+<tr id='pt6.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_detail: 订单详情</div></td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='pt6.9' class='hiddenRow'>
@@ -913,8 +874,56 @@ pt6.9:
 </tr>
 
 <tr id='pt6.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 新增回款记录</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.10')" >
+        pass</a>
+
+    <div id='div_pt6.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.10: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.11' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_payee: 获取回款方式</div></td>
     <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt6.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_plan</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.12')" >
+        pass</a>
+
+    <div id='div_pt6.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.12: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr class='passClass'>
@@ -1541,10 +1550,10 @@ pt13.5:
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>88</td>
-    <td>86</td>
-    <td>1</td>
-    <td>1</td>
+    <td>90</td>
+    <td>90</td>
+    <td>0</td>
+    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>
