@@ -8,7 +8,7 @@ class ChanceCase(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        print("销售线索：start")
+        print("销售机会：start")
 
     def setUp(self):
         self.cha = chance.Chance()

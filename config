@@ -96,3 +96,10 @@ query = /api/v2/oa/project/query
 attachment = /api/v2/attachment/uuid/
 batch = /p/attachment/api/v2/attachment/
 
+[speedup]
+event_list = /api/v2/speedup/flowevent/mobile/event/list
+flow_myexec = /api/v2/speedup/flowevent/mobile/flow/myexec
+flow_list = /api/v2/speedup/flowevent/mobile/flow/list
+flow_event = /api/v2/speedup/flowevent/
+init_list = /api/v2/speedup/flowevent/mobile/flow/init_list
+init_flow = /api/v2/speedup/flowevent/mobile

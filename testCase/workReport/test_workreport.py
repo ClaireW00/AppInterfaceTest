@@ -92,7 +92,6 @@ class WorkReportCase(unittest.TestCase):
         self.assertEqual(workreport_request['content'],workreport_response['content'])       # 验证报告内容是否与提交一致
         self.assertEqual(workreport_request['crmDatas'], workreport_response['crmDatas'])   # 验证跟进统计是否与提交一致
 
-
     # 测试编辑报告
     def test_Edit_Wreport(self):
         '''测试编辑报告用例：编辑报告内容'''
@@ -133,19 +132,6 @@ class WorkReportCase(unittest.TestCase):
         self.assertEqual(result.status_code,200)
         wreport_response=result.json()
         self.assertEqual(wreport_request['content'],wreport_response['content'])  #判断报告内容是否语体教相同
-
-
-    '''
-        #报告列表查询,默认返回第一页，20条数据，按创建时间查询
-        参数:pageIndex int  "当前页码"
-        pageSize int"每页记录数"
-        sendType int "0:全部, 1:提交给我的 2:我提交的,3: 抄送给我的"
-        reportType int "报告类型 全部:0 日报:1 周报:2 月报:3"
-        isReviewed int "是否点评 0:全部 1:未点评 2:已点评"
-        keyword string "关键词"
-        startAt int64 "时间戳 开始时间"
-        endAt int64 "时间戳 结束时间"
-        '''
 
     # 测试我的报告列表-本月
     def test_Wreport_Mylist(self):

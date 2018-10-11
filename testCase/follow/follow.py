@@ -8,13 +8,11 @@ class Follow(object):
 
     def __init__(self):
         self.f = readConfig.ReadConfig()
-        self.host = self.f.getHttpValue("host")
-        self.baseurl=self.f.getHttpValue("baseurl")
-        authorization = self.f.getUserValue("authorization")
+        self.baseurl = self.f.getHttpValue("baseurl")
         # 配置请求头
         self.header = self.f.get_header()
-        self.header["Host"] = self.host
-        self.header["Authorization"] = authorization
+        self.header["Host"] = self.f.getHttpValue("host")
+        self.header["Authorization"] = self.f.getUserValue("authorization")
 
     # 选择客户后获取写跟进界面
     def new_activity(self, customer_id):

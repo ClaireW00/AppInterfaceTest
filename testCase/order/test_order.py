@@ -21,10 +21,10 @@ class OrderCase(commonassert.CommonTest):
     # 列表处理方式提炼
     def listProcess(self, result, param, first_at, port="old",  **kw):  # port接口为老接口还是新接口，老接口没返回errcode
         if port == "old":
-            self.assertStatus(result)
+            self.assertStatus(result, "old")
             data = result.json()
         else:
-            self.assertErrcode(result)
+            self.assertStatus(result)
             data = result.json()["data"]
         total_records = data["totalRecords"]
         records = data["records"]  # list
@@ -134,7 +134,7 @@ class OrderCase(commonassert.CommonTest):
         }
         order_id = self.ord.get_order(param)["id"]
         result = self.ord.order_detail(order_id)
-        self.assertErrcode(result)
+        self.assertStatus(result)
         self.assertEqual(order_id, result.json()["data"]["id"])  # 详情订单id与传入得id相同
 
     # 设置参与人
@@ -153,7 +153,7 @@ class OrderCase(commonassert.CommonTest):
                         self.u.get_User("刘洋C")]
         }
         result = self.ord.edit_partner(order_id, data)
-        self.assertErrcode(result)
+        self.assertStatus(result)
         ord_detail = self.ord.order_detail(order_id).json()["data"]
         print("设置参与人的订单：", ord_detail["title"])
         self.assertEqual(data["members"], ord_detail["members"], msg=ord_detail["title"])  # 断言设置联系人后，订单详情联系人与设置一致
@@ -210,11 +210,11 @@ class OrderCase(commonassert.CommonTest):
                 "receivedAt": int(time.time()),
                 "billingMoney": 3568
             }],
-            "startAt": 1516678260,
+            "startAt": int(datetime.now().timestamp()),
             "status": 0
         }
         result = self.ord.create_order(request_data)
-        self.assertErrcode(result)
+        self.assertStatus(result)
         response_data = result.json()['data']
         self.assertEqual(request_data["title"], response_data["title"], msg=response_data['title'])  # 判断订单标题是否一致
         # 判断成交金额吃否一致
@@ -299,7 +299,7 @@ class OrderCase(commonassert.CommonTest):
     def test_payee(self):
         """获取回款方式"""
         result = self.ord.payee()
-        self.assertErrcode(result)
+        self.assertStatus(result)
 
     # 新增回款记录
     def test_pay(self):
@@ -325,7 +325,7 @@ class OrderCase(commonassert.CommonTest):
             "billingMoney": random.randint(200, 1000)
         }
         result = self.ord.pay(data)
-        self.assertStatus(result)
+        self.assertStatus(result, "old")
         data_response = result.json()
         print(data_response["orderTitle"])
         # 断言请求值与返回值相同
@@ -352,7 +352,7 @@ class OrderCase(commonassert.CommonTest):
             "remindType": 3     # 提醒方式，1计划前1天， 2前2天，3前3天，4前一周，5不提醒
         }
         result = self.ord.plan(data)
-        self.assertStatus(result)
+        self.assertStatus(result, "old")
         data_response = result.json()
         print("添加回款计划的订单：", data_response["orderId"])
         for key in data:
@@ -375,7 +375,7 @@ class OrderCase(commonassert.CommonTest):
             }
         }
         result = self.ord.owner(data)
-        self.assertErrcode(result)
+        self.assertStatus(result)
         print("更改负责人的订单：", order_id)
 
     @classmethod

@@ -32,15 +32,15 @@ def getTimeRegionByType(timeType='Today'):
             endAt = datetime(nowTime.year, 12, 31, 23, 59, 59).timestamp()
         else:
             endAt = (datetime(nowTime.year, nowTime.month+1, 1, 23, 59, 59)-timedelta(days=1)).timestamp()
-    elif timeType == 'LastMonth':
+    elif timeType == 'LastMonth':       # 上月
         timeInfor = datetime(nowTime.year, nowTime.month, 1) - timedelta(days=1)
         endAt = (datetime(nowTime.year, nowTime.month, 1, 23, 59, 59) - timedelta(days=1)).timestamp()
         startAt = (datetime(timeInfor.year, timeInfor.month, 1, 0, 0, 0)).timestamp()
-    elif timeType == 'TheLast30Day':
+    elif timeType == 'TheLast30Day':    # 最近30天
         timeInfor = timedelta(days=29)
         startAt = (datetime(nowTime.year, nowTime.month, nowTime.day, 0, 0, 0) - timeInfor).timestamp()
         endAt = datetime(nowTime.year, nowTime.month, nowTime.day, 23, 59, 59).timestamp()
-    elif timeType == 'LastSevenDay':
+    elif timeType == 'LastSevenDay':    # 最近7天
         timeInfor = timedelta(days=6)
         startAt = (datetime(nowTime.year, nowTime.month, nowTime.day, 0, 0, 0) - timeInfor).timestamp()
         endAt = datetime(nowTime.year, nowTime.month, nowTime.day, 23, 59, 59).timestamp()

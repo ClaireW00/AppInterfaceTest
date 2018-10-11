@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>KuaiQi Test Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-09-14 15:54:30</p>
-<p class='attribute'><strong>Duration:</strong> 0:06:41.775000</p>
-<p class='attribute'><strong>Status:</strong> Pass 90</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-10-11 11:47:06</p>
+<p class='attribute'><strong>Duration:</strong> 0:14:10.775000</p>
+<p class='attribute'><strong>Status:</strong> Pass 97</p>
 
 <p class='description'>测试用例执行明细</p>
 </div>
@@ -688,11 +688,11 @@ pt4.10:
 
 <tr class='passClass'>
     <td>order.test_order.OrderCase</td>
-    <td>12</td>
-    <td>12</td>
+    <td>13</td>
+    <td>13</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c6',12)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c6',13)">Detail</a></td>
 </tr>
 
 <tr id='pt6.1' class='hiddenRow'>
@@ -874,7 +874,7 @@ pt6.9:
 </tr>
 
 <tr id='pt6.10' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_pay: 新增回款记录</div></td>
+    <td class='none'><div class='testcase'>test_owner</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -898,26 +898,50 @@ pt6.10:
 </tr>
 
 <tr id='pt6.11' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_payee: 获取回款方式</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt6.12' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_plan</div></td>
+    <td class='none'><div class='testcase'>test_pay: 新增回款记录</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.12')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.11')" >
         pass</a>
 
-    <div id='div_pt6.12' class="popup_window">
+    <div id='div_pt6.11' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.12').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.11').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt6.12: 
+pt6.11: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_payee: 获取回款方式</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt6.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_plan</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.13')" >
+        pass</a>
+
+    <div id='div_pt6.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.13: 
 
         </pre>
     </div>
@@ -1224,35 +1248,83 @@ pt8.6:
 </tr>
 
 <tr class='passClass'>
+    <td>speedup.test_speedup.SpeedupCase</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',4)">Detail</a></td>
+</tr>
+
+<tr id='pt10.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_eventList_001: 我执行的：全部数据按开始时间倒叙排序</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt10.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_eventList_002: 我执行的：执行中数据按开始时间顺序排序</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt10.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_eventList_003: 我执行的：最近30天已完成数据按完成时间倒叙</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt10.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_flowList_001: 我组织的：待分派按开始时间倒序</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>task.test_task.TaskCase</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',2)">Detail</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_myTask_001: 我的任务列表</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt11.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_myTask_002: 筛选我负责的任务</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
     <td>user.test_user.UserCase</td>
     <td>2</td>
     <td>2</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c10',2)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c12',2)">Detail</a></td>
 </tr>
 
-<tr id='pt10.1' class='hiddenRow'>
+<tr id='pt12.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_Get_Allusers: 测试获取组织架构接口：获取组织架构</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt10.2' class='hiddenRow'>
+<tr id='pt12.2' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_UserProfile: 测试个人信息界面</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.2')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.2')" >
         pass</a>
 
-    <div id='div_pt10.2' class="popup_window">
+    <div id='div_pt12.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt10.2: 
+pt12.2: 
 
         </pre>
     </div>
@@ -1267,169 +1339,11 @@ pt10.2:
     <td>6</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c11',6)">Detail</a></td>
-</tr>
-
-<tr id='pt11.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_CustormerNearme: 测试获取拜访客户列表</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.1')" >
-        pass</a>
-
-    <div id='div_pt11.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt11.1: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt11.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_VisitList: 拜访签到列表默认展示数据:最近30天,创建时间倒叙</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.2')" >
-        pass</a>
-
-    <div id='div_pt11.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt11.2: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt11.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_VisitList_Today: 拜访签到列表按时间筛选数据:今天，创建时间倒叙</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.3')" >
-        pass</a>
-
-    <div id='div_pt11.3' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.3').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt11.3: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt11.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_VisitList_customerType: 拜访签到列表按客户类型筛选数据:客户类型：开发客户</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.4')" >
-        pass</a>
-
-    <div id='div_pt11.4' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.4').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt11.4: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt11.5' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_VisitList_user: 拜访签到列表按人员筛选数据:时间不限，人员：陈老师</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.5')" >
-        pass</a>
-
-    <div id='div_pt11.5' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.5').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt11.5: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt11.6' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_createVisit: 新建拜访：填写所有字段</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr class='passClass'>
-    <td>wfinstance.test_wfinstance.WfInstanceCase</td>
-    <td>3</td>
-    <td>3</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c12',3)">Detail</a></td>
-</tr>
-
-<tr id='pt12.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_create_wfinstance: 新建请假审批</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt12.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_get_wfbizform: 获取审批类别接口</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt12.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_get_wftemplate: 获取审批流程接口</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr class='passClass'>
-    <td>workReport.test_workreport.WorkReportCase</td>
-    <td>5</td>
-    <td>5</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c13',5)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c13',6)">Detail</a></td>
 </tr>
 
 <tr id='pt13.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_CreateWorkReport: 测试新建报告用例：正常新建报告</div></td>
+    <td class='none'><div class='testcase'>test_CustormerNearme: 测试获取拜访客户列表</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -1453,7 +1367,7 @@ pt13.1:
 </tr>
 
 <tr id='pt13.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_Edit_Wreport: 测试编辑报告用例：编辑报告内容</div></td>
+    <td class='none'><div class='testcase'>test_VisitList: 拜访签到列表默认展示数据:最近30天,创建时间倒叙</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -1477,7 +1391,7 @@ pt13.2:
 </tr>
 
 <tr id='pt13.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_Wreport_Mylist: 测试获取我的报告列表用例：默认获取本月数据</div></td>
+    <td class='none'><div class='testcase'>test_VisitList_Today: 拜访签到列表按时间筛选数据:今天，创建时间倒叙</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -1501,7 +1415,7 @@ pt13.3:
 </tr>
 
 <tr id='pt13.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_Wreport_Search: 测试报告列表搜索：关键字“测试周报</div></td>
+    <td class='none'><div class='testcase'>test_VisitList_customerType: 拜访签到列表按客户类型筛选数据:客户类型：开发客户</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -1525,7 +1439,7 @@ pt13.4:
 </tr>
 
 <tr id='pt13.5' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_get_CrmData: 测试报告中跟进统计用例：获取本月跟进统计</div></td>
+    <td class='none'><div class='testcase'>test_VisitList_user: 拜访签到列表按人员筛选数据:时间不限，人员：陈老师</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -1548,10 +1462,168 @@ pt13.5:
     </td>
 </tr>
 
+<tr id='pt13.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_createVisit: 新建拜访：填写所有字段</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>wfinstance.test_wfinstance.WfInstanceCase</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c14',3)">Detail</a></td>
+</tr>
+
+<tr id='pt14.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_create_wfinstance: 新建请假审批</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt14.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_wfbizform: 获取审批类别接口</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt14.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_wftemplate: 获取审批流程接口</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>workReport.test_workreport.WorkReportCase</td>
+    <td>5</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c15',5)">Detail</a></td>
+</tr>
+
+<tr id='pt15.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_CreateWorkReport: 测试新建报告用例：正常新建报告</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.1')" >
+        pass</a>
+
+    <div id='div_pt15.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.1: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Edit_Wreport: 测试编辑报告用例：编辑报告内容</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.2')" >
+        pass</a>
+
+    <div id='div_pt15.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.2: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Wreport_Mylist: 测试获取我的报告列表用例：默认获取本月数据</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.3')" >
+        pass</a>
+
+    <div id='div_pt15.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.3: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Wreport_Search: 测试报告列表搜索：关键字“测试周报</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.4')" >
+        pass</a>
+
+    <div id='div_pt15.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.4: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_CrmData: 测试报告中跟进统计用例：获取本月跟进统计</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.5')" >
+        pass</a>
+
+    <div id='div_pt15.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.5: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
 <tr id='total_row'>
     <td>Total</td>
-    <td>90</td>
-    <td>90</td>
+    <td>97</td>
+    <td>97</td>
     <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>

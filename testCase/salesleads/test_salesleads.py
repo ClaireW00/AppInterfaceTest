@@ -5,6 +5,8 @@ from testCase.user import user
 
 
 from testCase.login import test_login
+
+
 class Salesleades(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -186,6 +188,7 @@ class Salesleades(unittest.TestCase):
             isTrue = (key in sa["name"])or(key in sa["companyName"])
             self.assertTrue(isTrue, msg='搜索结果错误！')
 
+    # 团队线索
     def test_TeamSaleslead(self):
         '''测试获取团队线索'''
         param = {

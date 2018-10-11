@@ -5,6 +5,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="testCase.salesleads.Salesleads.*" />
+          <option value="testCase.task.task" />
         </list>
       </option>
     </inspection_tool>

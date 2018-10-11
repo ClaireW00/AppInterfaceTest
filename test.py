@@ -40,3 +40,5 @@ n = 3
 
 if __name__ == "__main__":
     print(str(datetime.now()))
+    for i in range(1,5):
+        print(i)
