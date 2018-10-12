@@ -103,3 +103,6 @@ flow_list = /api/v2/speedup/flowevent/mobile/flow/list
 flow_event = /api/v2/speedup/flowevent/
 init_list = /api/v2/speedup/flowevent/mobile/flow/init_list
 init_flow = /api/v2/speedup/flowevent/mobile
+launch_concise = /api/v2/speedup/cusservice/launch/concise
+title = /api/v2/speedup/flowevent/
+node = /api/v2/speedup/flowevent/node/

@@ -199,7 +199,7 @@ class CustomerManger(object):
     def get_similar_customer(self):
         param = {
             "isAll": False,  # true，全公司数据，false排除公海客户
-            "isSelf": True,  # true 我负责的和我参与的，false的情况没有
+            "isSelf": True,  # true 我负责的和我参与的，false的情况没有(全公司数据-发起售后流程)
             "pageIndex": 20,
             "pageSize": 1
         }

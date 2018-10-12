@@ -185,7 +185,7 @@ class OrderCase(commonassert.CommonTest):
                 "remark": "回款计划"
             }],  # 回款计划
             "customerId": customer_id,
-            "title": "订单"+time.strftime('%Y-%m-%d %H:%M',time.localtime(time.time())),
+            "title": "订单"+time.strftime('%Y-%m-%d %H:%M', time.localtime(time.time())),
             "dealMoney":  pro['totalMoney'],
             "endAt": -2209017601,
             "proInfo": [pro],   # 产品信息

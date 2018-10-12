@@ -2,6 +2,9 @@ import unittest
 from testCase.speedup import speedup
 from commom import commonassert
 from commom import get_Time_Type
+from testCase.customer import customerManger
+from testCase.order import order
+import time
 
 
 class SpeedupCase(commonassert.CommonTest):
@@ -75,6 +78,62 @@ class SpeedupCase(commonassert.CommonTest):
         self.param["field"] = "finishedAt"
         self.param["orderBy"] = "desc"
         self.listProcess(self.param, self.speed.init_list, "init_list")     # 断言发起人是登录人和排序
+
+    # 获取售后流程
+    def test_launchConcise(self):
+        result = self.speed.launch_concise()
+        self.assertStatus(result)
+
+    # 手动发起关联客户流程
+    def test_initFlow_001(self):
+        """手动发起关联客户流程"""
+        customer_id = customerManger.CustomerManger().get_similar_customer()["id"]
+        data = {
+            "flowTitle": "关联客户流程" + time.strftime("%Y-%m-%d %H:%M", time.localtime(time.time())),
+            "cusServiceId": self.speed.get_concise_id(),
+            "customerId": customer_id
+        }
+        result = self.speed.init_flow(data)
+        self.assertStatus(result)
+        flow = result.json()["data"]
+        self.assertEqual(data["flowTitle"], flow["flowTitle"], msg=data)
+        self.assertEqual(data["cusServiceId"], flow["flowId"], msg=data)
+        self.assertEqual(data["customerId"], flow["customerId"], msg=data)
+
+    # 手动发起关联订单售后流程
+    def test_initFlow_002(self):
+        """手动发起关联订单流程"""
+        params = {
+            "filed": "createdAt",
+            "orderBy": "desc",
+            "pageSize": 20,
+            "pageIndex": 1,
+            "status": 0  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
+        }
+        order_id = order.Order().get_order(params)["id"]
+        data = {
+            "flowTitle": "关联订单流程" + time.strftime("%Y-%m-%d %H:%M", time.localtime(time.time())),
+            "cusServiceId": self.speed.get_concise_id(),
+            "orderId": order_id
+        }
+        result = self.speed.init_flow(data)
+        self.assertStatus(result)
+        flow = result.json()["data"]
+        self.assertEqual(data["flowTitle"], flow["flowTitle"], msg=data)
+        self.assertEqual(data["cusServiceId"], flow["flowId"], msg=data)
+        self.assertEqual(data["orderId"], flow["orderId"], msg=data)
+
+    # 更改流程名称
+    def test_title(self):
+        """更改流程名称"""
+        flow_id = self.speed.get_flow()["id"]
+        data = {
+            "title": "更改过名称的流程" + time.strftime("%Y-%m-%d %H:%M", time.localtime(time.time()))
+        }
+        result = self.speed.title(flow_id, data)
+        self.assertStatus(result)
+        flow = self.speed.flow_event(flow_id).json()["data"]       # 修改后获取流程信息
+        self.assertEqual(data["title"], flow["flowTitle"])         # 断言修改后流程名称是否正确
 
     @classmethod
     def tearDownClass(cls):
