@@ -51,8 +51,8 @@ def send_report(report_path):      # 发送报告到指定email
     smtp_server = "smtp.qq.com"
 
     msg = MIMEMultipart()
-    msg["From"] = _format_addr("your baby<%s>" % from_addr)  # 设置发件人名
-    msg["To"] = _format_addr("my pig<%s>" % to_addr)  # 设置收件人名
+    msg["From"] = _format_addr("Wangll<%s>" % from_addr)  # 设置发件人名
+    msg["To"] = _format_addr("My colleague <%s>" % to_addr)  # 设置收件人名
     msg["Subject"] = Header("我的接口测试报告", "utf-8").encode()  # 设置邮件标题
     msg.attach(MIMEText("my report:please look at attach", "plain", "utf-8"))  # 邮件内容
     # 邮件附件
