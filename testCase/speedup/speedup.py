@@ -74,4 +74,9 @@ class SpeedUp(object):
         result = requests.put(url, headers=self.header, json=data)
         return result
 
+    # 提交流程说明
+    def remark(self, flow_id, data):
+        url = self.baseurl + self.f.get_url("speedup", "remark") + flow_id
+        result = requests.put(url, headers=self.header, json=data)
+        return result
 

@@ -1,6 +1,11 @@
 # codingLutf-8
-import unittest
 import HTMLTestRunner
+import smtplib
+import unittest
+from email.header import Header
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.utils import parseaddr, formataddr
 import readConfig
 from testCase.login import test_login
 
@@ -31,8 +36,34 @@ def all_case():  # 待执行用例的目录
     for test_suite in discover:   # 将discover加载出来的数据循环加入到测试套件中
         for test_case in test_suite:
             testcase.addTests(test_case)
-
     return testcase
+
+
+def _format_addr(s):
+    name, addr = parseaddr(s)
+    return formataddr((Header(name, "utf-8").encode(), addr))
+
+
+def send_report(report_path):      # 发送报告到指定email
+    from_addr = "320855089@qq.com"
+    password = "cryfivtjpoukbjfc"
+    to_addr = ["wll@ukuaiqi.com", "1271782085@qq.com"]
+    smtp_server = "smtp.qq.com"
+
+    msg = MIMEMultipart()
+    msg["From"] = _format_addr("your baby<%s>" % from_addr)  # 设置发件人名
+    msg["To"] = _format_addr("my pig<%s>" % to_addr)  # 设置收件人名
+    msg["Subject"] = Header("我的接口测试报告", "utf-8").encode()  # 设置邮件标题
+    msg.attach(MIMEText("my report:please look at attach", "plain", "utf-8"))  # 邮件内容
+    # 邮件附件
+    att = MIMEText(open(report_path, "rb").read(), "base64", "gb2312")
+    att["Content-Type"] = "application/octet-stream"
+    att["Content-Disposition"] = 'attachment; filename="result.html"'
+    msg.attach(att)
+    server = smtplib.SMTP(smtp_server, 25)      # email模块复制构建邮件，SMTP负责发送邮件
+    server.login(from_addr, password)
+    server.sendmail(from_addr, to_addr, msg.as_string())
+    server.quit()
 
 
 if __name__ == "__main__":
@@ -43,4 +74,5 @@ if __name__ == "__main__":
         runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='KuaiQi Test Report', description='测试用例执行明细')
         runner.run(all_case())
         fp.close()
+        send_report(report_path)
 

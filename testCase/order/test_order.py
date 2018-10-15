@@ -365,7 +365,7 @@ class OrderCase(commonassert.CommonTest):
             "orderBy": "desc",
             "pageSize": 20,
             "pageIndex": 1,
-            "status": 4  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
+            "status": 3  # 0全部状态  1待审核   7审批中  2未通过  3进行中  4已完成  5意外终止
         }
         order_id = self.ord.get_order(param)["id"]
         data = {

@@ -2,6 +2,7 @@ import unittest
 from testCase.speedup import speedup
 from commom import commonassert
 from commom import get_Time_Type
+from commom import attachments
 from testCase.customer import customerManger
 from testCase.order import order
 import time
@@ -79,8 +80,9 @@ class SpeedupCase(commonassert.CommonTest):
         self.param["orderBy"] = "desc"
         self.listProcess(self.param, self.speed.init_list, "init_list")     # 断言发起人是登录人和排序
 
-    # 获取售后流程
+    # 获取售后流程类型
     def test_launchConcise(self):
+        """获取售后流程类型"""
         result = self.speed.launch_concise()
         self.assertStatus(result)
 
@@ -134,6 +136,21 @@ class SpeedupCase(commonassert.CommonTest):
         self.assertStatus(result)
         flow = self.speed.flow_event(flow_id).json()["data"]       # 修改后获取流程信息
         self.assertEqual(data["title"], flow["flowTitle"])         # 断言修改后流程名称是否正确
+
+    # 提交流程说明
+    def test_remark(self):
+        """提交流程说明"""
+        flow_id = self.speed.get_flow()["id"]
+        data = {
+            "remark": "添加流程说明" + time.strftime("%Y-%m-%d", time.localtime(time.time())),     # 流程说明
+            "uuid": attachments.attachments("0")["UUId"]
+        }
+        result = self.speed.remark(flow_id, data)
+        self.assertStatus(result)
+        data_response = result.json()["data"]
+        self.assertEqual(data["remark"], data_response["remark"], msg=data_response)
+        self.assertEqual(1, len(data_response["attachments"]), msg=data_response)   # 断言附件数量与上传一致
+
 
     @classmethod
     def tearDownClass(cls):

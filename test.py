@@ -3,6 +3,7 @@ from email.mime.text import MIMEText
 import smtplib
 from email.utils import parseaddr, formataddr
 from email.header import Header
+from email.mime.multipart import MIMEMultipart
 
 
 
@@ -48,20 +49,22 @@ def _format_addr(s):
 if __name__ == "__main__":
     from_addr = "320855089@qq.com"
     password = "cryfivtjpoukbjfc"
-    to_addr = "1271782085@qq.com"
+    to_addr = ["895457129@qq.com", "1271782085@qq.com"]
     smtp_server = "smtp.qq.com"
 
-    msg = MIMEText("you are my handsome baby!", "plain", "utf-8")
-    msg["From"] = _format_addr("your baby<%s>" % from_addr)
-    msg["To"] = _format_addr("my pig<%s>" % to_addr)
-    msg["Subject"] = Header("你的宝宝已上线", "utf-8").encode()
-
+    msg = MIMEMultipart()
+    msg["From"] = _format_addr("your baby<%s>" % from_addr)     # 设置发件人名
+    msg["To"] = _format_addr("my pig<%s>" % to_addr)            # 设置收件人名
+    msg["Subject"] = Header("我的接口测试报告", "utf-8").encode()   # 设置邮件标题
+    msg.attach(MIMEText("my report:please look at attach", "plain", "utf-8"))   # 邮件内容
+    # 邮件附件
+    att = MIMEText(open("C:\\Users\\Administrator\\AppInterfaceTest\\result.html", "rb") .read(), "base64", "gb2312")
+    att["Content-Type"] = "application/octet-stream"
+    att["Content-Disposition"] = 'attachment; filename="result.html"'
+    msg.attach(att)
     server = smtplib.SMTP(smtp_server, 25)
     server.set_debuglevel(1)
-    print("before login ")
     server.login(from_addr, password)
-    print("after login ")
-    server.sendmail(from_addr, [to_addr], msg.as_string())
-    print("after send")
+    server.sendmail(from_addr, to_addr, msg.as_string())
     server.quit()
 

@@ -4,7 +4,7 @@ import readConfig
 
 
 # 上传附件返回UUID,现在没有返回UUID
-def attachments(BizType):
+def attachments(BizType):       # BizType为字符类型
     UUid = str(uuid.uuid1())
     f = readConfig.ReadConfig()
     Authorization = f.getUserValue("authorization")
