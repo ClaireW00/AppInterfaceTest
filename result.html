@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>KuaiQi Test Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-10-15 10:35:28</p>
-<p class='attribute'><strong>Duration:</strong> 0:17:05.130000</p>
-<p class='attribute'><strong>Status:</strong> Pass 102 Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-10-22 17:31:08</p>
+<p class='attribute'><strong>Duration:</strong> 0:02:35.192000</p>
+<p class='attribute'><strong>Status:</strong> Pass 83 Failure 6 Error 15</p>
 
 <p class='description'>测试用例执行明细</p>
 </div>
@@ -235,12 +235,12 @@ function showOutput(id, name) {
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>chance.test_chance.ChanceCase</td>
     <td>5</td>
-    <td>5</td>
+    <td>4</td>
     <td>0</td>
-    <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c2',5)">Detail</a></td>
 </tr>
 
@@ -264,17 +264,48 @@ function showOutput(id, name) {
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt2.5' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_createSalestage: 新建机会</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft2.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_createSalestage: 新建机会</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.5')" >
+        error</a>
+
+    <div id='div_ft2.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.5: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\chance\test_chance.py", line 35, in test_createSalestage
+    "cusName": custo.get_similar_customer()['name'],
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 210, in get_similar_customer
+    return records[0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\chance\test_chance.py", line 35, in test_createSalestage
+    "cusName": custo.get_similar_customer()['name'],
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 210, in get_similar_customer
+    return records[0]
+IndexError: list index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>customer.test_customerManager.CustomerManagerCase</td>
     <td>27</td>
-    <td>27</td>
-    <td>0</td>
-    <td>0</td>
+    <td>17</td>
+    <td>3</td>
+    <td>7</td>
     <td><a href="javascript:showClassDetail('c3',27)">Detail</a></td>
 </tr>
 
@@ -288,9 +319,46 @@ function showOutput(id, name) {
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt3.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_createCustomer: 新建客户用例：正常新建客户</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft3.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_createCustomer: 新建客户用例：正常新建客户</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.3')" >
+        fail</a>
+
+    <div id='div_ft3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.3: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 65, in test_createCustomer
+    self.assertStatus(result)
+  File "C:\Users\Administrator\AppInterfaceTest\commom\commonassert.py", line 12, in assertStatus
+    self.assertEqual(result_json["errcode"], 0, msg=result.text)
+AssertionError: 60001 != 0 : {
+  "errcode": 60001,
+  "errmsg": "联系人必填"
+}
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 65, in test_createCustomer
+    self.assertStatus(result)
+  File "C:\Users\Administrator\AppInterfaceTest\commom\commonassert.py", line 12, in assertStatus
+    self.assertEqual(result_json["errcode"], 0, msg=result.text)
+AssertionError: 60001 != 0 : {
+  "errcode": 60001,
+  "errmsg": "联系人必填"
+}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt3.4' class='hiddenRow'>
@@ -348,29 +416,196 @@ function showOutput(id, name) {
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt3.15' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_customer_owner: 转移客户</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft3.15' class='none'>
+    <td class='failCase'><div class='testcase'>test_customer_owner: 转移客户</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.15')" >
+        fail</a>
+
+    <div id='div_ft3.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.15: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 160, in test_customer_owner
+    self.assertStatus(result_detail)
+  File "C:\Users\Administrator\AppInterfaceTest\commom\commonassert.py", line 12, in assertStatus
+    self.assertEqual(result_json["errcode"], 0, msg=result.text)
+AssertionError: 60001 != 0 : {
+  "errcode": 60001,
+  "errmsg": "您没有权限查看该内容"
+}
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 160, in test_customer_owner
+    self.assertStatus(result_detail)
+  File "C:\Users\Administrator\AppInterfaceTest\commom\commonassert.py", line 12, in assertStatus
+    self.assertEqual(result_json["errcode"], 0, msg=result.text)
+AssertionError: 60001 != 0 : {
+  "errcode": 60001,
+  "errmsg": "您没有权限查看该内容"
+}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt3.16' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_customer_statusnull: 新建客户用例：状态传空</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft3.16' class='none'>
+    <td class='failCase'><div class='testcase'>test_customer_statusnull: 新建客户用例：状态传空</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.16')" >
+        fail</a>
+
+    <div id='div_ft3.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.16: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 130, in test_customer_statusnull
+    self.assertStatus(result)
+  File "C:\Users\Administrator\AppInterfaceTest\commom\commonassert.py", line 12, in assertStatus
+    self.assertEqual(result_json["errcode"], 0, msg=result.text)
+AssertionError: 60001 != 0 : {
+  "errcode": 60001,
+  "errmsg": "联系人必填"
+}
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 130, in test_customer_statusnull
+    self.assertStatus(result)
+  File "C:\Users\Administrator\AppInterfaceTest\commom\commonassert.py", line 12, in assertStatus
+    self.assertEqual(result_json["errcode"], 0, msg=result.text)
+AssertionError: 60001 != 0 : {
+  "errcode": 60001,
+  "errmsg": "联系人必填"
+}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt3.17' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_delete_customer: 删除客户</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft3.17' class='none'>
+    <td class='errorCase'><div class='testcase'>test_delete_customer: 删除客户</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.17')" >
+        error</a>
+
+    <div id='div_ft3.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.17: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 169, in test_delete_customer
+    customer_id = self.cust.getCustomerID()
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 172, in getCustomerID
+    return custs[0]["id"]
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 169, in test_delete_customer
+    customer_id = self.cust.getCustomerID()
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 172, in getCustomerID
+    return custs[0]["id"]
+TypeError: 'NoneType' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt3.18' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_edit_customer: 编辑客户名称、状态、简介</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft3.18' class='none'>
+    <td class='errorCase'><div class='testcase'>test_edit_customer: 编辑客户名称、状态、简介</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.18')" >
+        error</a>
+
+    <div id='div_ft3.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.18: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 184, in test_edit_customer
+    customer_id = self.cust.getCustomerID()
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 172, in getCustomerID
+    return custs[0]["id"]
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 184, in test_edit_customer
+    customer_id = self.cust.getCustomerID()
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 172, in getCustomerID
+    return custs[0]["id"]
+TypeError: 'NoneType' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt3.19' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_edit_status: 客户详情快捷编辑状态</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft3.19' class='none'>
+    <td class='errorCase'><div class='testcase'>test_edit_status: 客户详情快捷编辑状态</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.19')" >
+        error</a>
+
+    <div id='div_ft3.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.19: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 223, in test_edit_status
+    customer_id = self.cust.getCustomerID()
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 172, in getCustomerID
+    return custs[0]["id"]
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 223, in test_edit_status
+    customer_id = self.cust.getCustomerID()
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 172, in getCustomerID
+    return custs[0]["id"]
+TypeError: 'NoneType' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt3.20' class='hiddenRow'>
@@ -397,22 +632,30 @@ pt3.20:
     </td>
 </tr>
 
-<tr id='pt3.21' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_ownlist_Default: 我负责的客户列表：默认跟进时间顺序排序</div></td>
+<tr id='ft3.21' class='none'>
+    <td class='errorCase'><div class='testcase'>test_ownlist_Default: 我负责的客户列表：默认跟进时间顺序排序</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.21')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.21')" >
+        error</a>
 
-    <div id='div_pt3.21' class="popup_window">
+    <div id='div_ft3.21' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.21').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.21').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt3.21: 
+ft3.21: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 705, in test_ownlist_Default
+    actual_total = len(records)  # 实际数据数量
+TypeError: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 705, in test_ownlist_Default
+    actual_total = len(records)  # 实际数据数量
+TypeError: object of type 'NoneType' has no len()
+
 
         </pre>
     </div>
@@ -421,14 +664,68 @@ pt3.21:
     </td>
 </tr>
 
-<tr id='pt3.22' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_ownlist_lastActAt_desc: 我负责的客户列表：按跟进时间倒序排序</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft3.22' class='none'>
+    <td class='errorCase'><div class='testcase'>test_ownlist_lastActAt_desc: 我负责的客户列表：按跟进时间倒序排序</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.22')" >
+        error</a>
+
+    <div id='div_ft3.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.22: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 748, in test_ownlist_lastActAt_desc
+    actual_total = len(records)  # 实际数据数量
+TypeError: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 748, in test_ownlist_lastActAt_desc
+    actual_total = len(records)  # 实际数据数量
+TypeError: object of type 'NoneType' has no len()
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt3.23' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_ownlist_search: 我负责的客户列表搜索：关键字“成都”</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft3.23' class='none'>
+    <td class='errorCase'><div class='testcase'>test_ownlist_search: 我负责的客户列表搜索：关键字“成都”</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.23')" >
+        error</a>
+
+    <div id='div_ft3.23' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.23').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.23: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 787, in test_ownlist_search
+    actual_total = len(records)  # 实际数据数量
+TypeError: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 787, in test_ownlist_search
+    actual_total = len(records)  # 实际数据数量
+TypeError: object of type 'NoneType' has no len()
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt3.24' class='hiddenRow'>
@@ -484,23 +781,85 @@ pt3.26:
     </td>
 </tr>
 
-<tr id='pt3.27' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_throw_sea_002: 开启丢公海原因时手动丢公海</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft3.27' class='none'>
+    <td class='errorCase'><div class='testcase'>test_throw_sea_001: 未开启丢公海原因时手动丢公海</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.27')" >
+        error</a>
+
+    <div id='div_ft3.27' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.27').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.27: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 647, in test_throw_sea_001
+    customer_id = self.cust.getCustomerID()
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 172, in getCustomerID
+    return custs[0]["id"]
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\test_customerManager.py", line 647, in test_throw_sea_001
+    customer_id = self.cust.getCustomerID()
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 172, in getCustomerID
+    return custs[0]["id"]
+TypeError: 'NoneType' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>follow.test_follow.FollowCase</td>
     <td>10</td>
-    <td>10</td>
+    <td>8</td>
     <td>0</td>
-    <td>0</td>
+    <td>2</td>
     <td><a href="javascript:showClassDetail('c4',10)">Detail</a></td>
 </tr>
 
-<tr id='pt4.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_create_follow_001: 客户添加快速记录：填写所有系统字段</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft4.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_create_follow_001: 客户添加快速记录：填写所有系统字段</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.1')" >
+        error</a>
+
+    <div id='div_ft4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.1: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\follow\test_follow.py", line 85, in test_create_follow_001
+    customer_id = self.cust.get_similar_customer()["id"]
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 210, in get_similar_customer
+    return records[0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\follow\test_follow.py", line 85, in test_create_follow_001
+    customer_id = self.cust.get_similar_customer()["id"]
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 210, in get_similar_customer
+    return records[0]
+IndexError: list index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt4.2' class='hiddenRow'>
@@ -558,7 +917,26 @@ pt4.4:
 
 <tr id='pt4.5' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_followList_003: 部门+记录行为+跟进对象+跟进时间顺序组合查询</div></td>
-    <td colspan='5' align='center'>pass</td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.5')" >
+        pass</a>
+
+    <div id='div_pt4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.5: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt4.6' class='hiddenRow'>
@@ -614,9 +992,40 @@ pt4.7:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt4.9' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_new_activity: 测试写跟进时获取到的客户信息正确</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft4.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_new_activity: 测试写跟进时获取到的客户信息正确</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.9')" >
+        error</a>
+
+    <div id='div_ft4.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.9: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\follow\test_follow.py", line 65, in test_new_activity
+    customer_id = self.cust.get_similar_customer()["id"]
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 210, in get_similar_customer
+    return records[0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\follow\test_follow.py", line 65, in test_new_activity
+    customer_id = self.cust.get_similar_customer()["id"]
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 210, in get_similar_customer
+    return records[0]
+IndexError: list index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt4.10' class='hiddenRow'>
@@ -653,32 +1062,63 @@ pt4.10:
 </tr>
 
 <tr id='pt5.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_AppLogin: 测试APP登录:正确的用户名，正确的密码</div></td>
+    <td class='none'><div class='testcase'>test_login_1: dict() -> new empty dictionary</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='pt5.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login_errorUsername: 测试APP登录接口：不存在的用户名</div></td>
+    <td class='none'><div class='testcase'>test_login_2: dict() -> new empty dictionary</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='pt5.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login_errorpwd: 测试APP登录接口：正确的用户名，错误的密码</div></td>
+    <td class='none'><div class='testcase'>test_login_3: dict() -> new empty dictionary</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr class='errorClass'>
     <td>order.test_order.OrderCase</td>
     <td>13</td>
-    <td>12</td>
-    <td>0</td>
+    <td>10</td>
     <td>1</td>
+    <td>2</td>
     <td><a href="javascript:showClassDetail('c6',13)">Detail</a></td>
 </tr>
 
-<tr id='pt6.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_CreateOder_O001: 新建订单：正常填写所有字段</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft6.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_CreateOder_O001: 新建订单：正常填写所有字段</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.1')" >
+        error</a>
+
+    <div id='div_ft6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.1: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 172, in test_CreateOder_O001
+    customer_id = self.cust.getCustomerID()
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 172, in getCustomerID
+    return custs[0]["id"]
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 172, in test_CreateOder_O001
+    customer_id = self.cust.getCustomerID()
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 172, in getCustomerID
+    return custs[0]["id"]
+TypeError: 'NoneType' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt6.2' class='hiddenRow'>
@@ -729,22 +1169,34 @@ pt6.3:
     </td>
 </tr>
 
-<tr id='pt6.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_MyOrder_O002: 测试获取我的订单列表：按成交金额倒叙</div></td>
+<tr id='ft6.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_MyOrder_O002: 测试获取我的订单列表：按成交金额倒叙</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.4')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.4')" >
+        fail</a>
 
-    <div id='div_pt6.4' class="popup_window">
+    <div id='div_ft6.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt6.4: 
+ft6.4: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 91, in test_MyOrder_O002
+    first_at, total_infor = self.listProcess(page_result, param, first_at, directorName=self.login_name)
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 39, in listProcess
+    self.assertTrue(first_at &gt;= sa[param["filed"]], msg=sa)
+AssertionError: False is not true : {'id': '58c909e7d33c651102005daa', 'title': '成交金额输入0', 'directorName': '刘洋C', 'status': 1, 'dealMoney': 0.0, 'proName': 'iphone6', 'customerName': '客户2-1', 'createdAt': 1489570279}
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 91, in test_MyOrder_O002
+    first_at, total_infor = self.listProcess(page_result, param, first_at, directorName=self.login_name)
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 39, in listProcess
+    self.assertTrue(first_at &gt;= sa[param["filed"]], msg=sa)
+AssertionError: False is not true : {'id': '58c909e7d33c651102005daa', 'title': '成交金额输入0', 'directorName': '刘洋C', 'status': 1, 'dealMoney': 0.0, 'proName': 'iphone6', 'customerName': '客户2-1', 'createdAt': 1489570279}
+
 
         </pre>
     </div>
@@ -854,30 +1306,22 @@ pt6.9:
     </td>
 </tr>
 
-<tr id='ft6.10' class='none'>
-    <td class='errorCase'><div class='testcase'>test_owner</div></td>
+<tr id='pt6.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_owner</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.10')" >
-        error</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.10')" >
+        pass</a>
 
-    <div id='div_ft6.10' class="popup_window">
+    <div id='div_pt6.10' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.10').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.10').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft6.10: Traceback (most recent call last):
-  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 370, in test_owner
-    order_id = self.ord.get_order(param)["id"]
-TypeError: 'NoneType' object is not subscriptable
-Traceback (most recent call last):
-  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 370, in test_owner
-    order_id = self.ord.get_order(param)["id"]
-TypeError: 'NoneType' object is not subscriptable
-
+pt6.10: 
 
         </pre>
     </div>
@@ -886,22 +1330,132 @@ TypeError: 'NoneType' object is not subscriptable
     </td>
 </tr>
 
-<tr id='pt6.11' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_pay: 新增回款记录</div></td>
+<tr id='ft6.11' class='none'>
+    <td class='errorCase'><div class='testcase'>test_pay: 新增回款记录</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.11')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.11')" >
+        error</a>
 
-    <div id='div_pt6.11' class="popup_window">
+    <div id='div_ft6.11' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.11').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.11').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt6.11: 
+ft6.11: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.VerifiedHTTPSConnection object at 0x037198F0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oa.staging.ukuaiqi.com', port=443): Max retries exceeded with url: /api/v2/order/self?filed=createdAt&amp;status=3&amp;pageSize=20&amp;pageIndex=1&amp;orderBy=desc (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x037198F0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 319, in test_pay
+    "orderId": self.ord.get_order(param)["id"],
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\order.py", line 25, in get_order
+    result = self.my_order(param)
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\order.py", line 20, in my_order
+    result = requests.get(url, params=param, headers=self.header)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oa.staging.ukuaiqi.com', port=443): Max retries exceeded with url: /api/v2/order/self?filed=createdAt&amp;status=3&amp;pageSize=20&amp;pageIndex=1&amp;orderBy=desc (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x037198F0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',))
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.VerifiedHTTPSConnection object at 0x037198F0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oa.staging.ukuaiqi.com', port=443): Max retries exceeded with url: /api/v2/order/self?filed=createdAt&amp;status=3&amp;pageSize=20&amp;pageIndex=1&amp;orderBy=desc (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x037198F0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\test_order.py", line 319, in test_pay
+    "orderId": self.ord.get_order(param)["id"],
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\order.py", line 25, in get_order
+    result = self.my_order(param)
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\order\order.py", line 20, in my_order
+    result = requests.get(url, params=param, headers=self.header)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oa.staging.ukuaiqi.com', port=443): Max retries exceeded with url: /api/v2/order/self?filed=createdAt&amp;status=3&amp;pageSize=20&amp;pageIndex=1&amp;orderBy=desc (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x037198F0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',))
+
 
         </pre>
     </div>
@@ -1236,13 +1790,13 @@ pt8.6:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>speedup.test_speedup.SpeedupCase</td>
-    <td>10</td>
-    <td>10</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c10',10)">Detail</a></td>
+    <td>11</td>
+    <td>9</td>
+    <td>1</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c10',11)">Detail</a></td>
 </tr>
 
 <tr id='pt10.1' class='hiddenRow'>
@@ -1270,9 +1824,40 @@ pt8.6:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt10.6' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_initFlow_001: 手动发起关联客户流程</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft10.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_initFlow_001: 手动发起关联客户流程</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.6')" >
+        error</a>
+
+    <div id='div_ft10.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.6: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\speedup\test_speedup.py", line 92, in test_initFlow_001
+    customer_id = customerManger.CustomerManger().get_similar_customer()["id"]
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 210, in get_similar_customer
+    return records[0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\speedup\test_speedup.py", line 92, in test_initFlow_001
+    customer_id = customerManger.CustomerManger().get_similar_customer()["id"]
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\customer\customerManger.py", line 210, in get_similar_customer
+    return records[0]
+IndexError: list index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt10.7' class='hiddenRow'>
@@ -1286,11 +1871,43 @@ pt8.6:
 </tr>
 
 <tr id='pt10.9' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_launchConcise</div></td>
+    <td class='none'><div class='testcase'>test_launchConcise: 获取售后流程类型</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt10.10' class='hiddenRow'>
+<tr id='ft10.10' class='none'>
+    <td class='failCase'><div class='testcase'>test_remark: 提交流程说明</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.10')" >
+        fail</a>
+
+    <div id='div_ft10.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.10: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\speedup\test_speedup.py", line 152, in test_remark
+    self.assertEqual(1, len(data_response["attachments"]), msg=data_response)   # 断言附件数量与上传一致
+AssertionError: 1 != 0 : {'remark': '添加流程说明2018-10-22', 'attachments': []}
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\speedup\test_speedup.py", line 152, in test_remark
+    self.assertEqual(1, len(data_response["attachments"]), msg=data_response)   # 断言附件数量与上传一致
+AssertionError: 1 != 0 : {'remark': '添加流程说明2018-10-22', 'attachments': []}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.11' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_title: 更改流程名称</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
@@ -1352,31 +1969,39 @@ pt12.2:
     </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>visit.test_visit.VisitCase</td>
     <td>6</td>
-    <td>6</td>
-    <td>0</td>
-    <td>0</td>
+    <td>4</td>
+    <td>1</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c13',6)">Detail</a></td>
 </tr>
 
-<tr id='pt13.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_CustormerNearme: 测试获取拜访客户列表</div></td>
+<tr id='ft13.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_CustormerNearme: 测试获取拜访客户列表</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.1')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.1')" >
+        fail</a>
 
-    <div id='div_pt13.1' class="popup_window">
+    <div id='div_ft13.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt13.1: 
+ft13.1: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\visit\test_visit.py", line 192, in test_CustormerNearme
+    self.assertEqual(result.json()["errcode"], 0, msg='返回信息错误')
+AssertionError: 1 != 0 : 返回信息错误
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\visit\test_visit.py", line 192, in test_CustormerNearme
+    self.assertEqual(result.json()["errcode"], 0, msg='返回信息错误')
+AssertionError: 1 != 0 : 返回信息错误
+
 
         </pre>
     </div>
@@ -1481,23 +2106,93 @@ pt13.5:
     </td>
 </tr>
 
-<tr id='pt13.6' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_createVisit: 新建拜访：填写所有字段</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft13.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_createVisit: 新建拜访：填写所有字段</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.6')" >
+        error</a>
+
+    <div id='div_ft13.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.6: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\visit\test_visit.py", line 33, in test_createVisit
+    result_json=result.json()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\visit\test_visit.py", line 33, in test_createVisit
+    result_json=result.json()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\site-packages\requests\models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>wfinstance.test_wfinstance.WfInstanceCase</td>
     <td>3</td>
-    <td>3</td>
+    <td>2</td>
     <td>0</td>
-    <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c14',3)">Detail</a></td>
 </tr>
 
-<tr id='pt14.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_create_wfinstance: 新建请假审批</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft14.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_create_wfinstance: 新建请假审批</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.1')" >
+        error</a>
+
+    <div id='div_ft14.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.1: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\wfinstance\test_wfinstance.py", line 67, in test_create_wfinstance
+    "customerId": custom["id"],
+UnboundLocalError: local variable 'custom' referenced before assignment
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppInterfaceTest\testCase\wfinstance\test_wfinstance.py", line 67, in test_create_wfinstance
+    "customerId": custom["id"],
+UnboundLocalError: local variable 'custom' referenced before assignment
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt14.2' class='hiddenRow'>
@@ -1641,10 +2336,10 @@ pt15.5:
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>103</td>
-    <td>102</td>
-    <td>0</td>
-    <td>1</td>
+    <td>104</td>
+    <td>83</td>
+    <td>6</td>
+    <td>15</td>
     <td>&nbsp;</td>
 </tr>
 </table>

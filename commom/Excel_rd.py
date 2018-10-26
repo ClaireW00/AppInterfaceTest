@@ -75,6 +75,7 @@ def write_excel_table(file, data):  # data为list
 
 
 if __name__ == '__main__':
-    data = [{'姓名': 'lily', 'score': 100}, {'姓名': 'claire', 'score': 80}, {'score': 80, '姓名': 'lingling'}]
+    # data = [{'姓名': 'lily', 'score': 100}, {'姓名': 'claire', 'score': 80}, {'score': 80, '姓名': 'lingling'}]
     # print(read_excel_table_byindex('E:\\test\\testcase1.xlsx'))
-    write_excel_table('E:\\test\\002.xlsx', data)
+    # write_excel_table('E:\\test\\002.xlsx', data)
+    print(read_excel_table_byindex("C:\\Users\\Administrator\\AppInterfaceTest\\testData\\loginData.xlsx"))

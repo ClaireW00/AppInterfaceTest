@@ -1,6 +1,6 @@
-[HTTP_staging]
+[HTTP]
 host = oa.staging.ukuaiqi.com
-baseurl = http://oa.staging.ukuaiqi.com
+baseurl = https://oa.staging.ukuaiqi.com
 app_userhost = user.staging.ukuaiqi.com
 app_userbaseurl = https://user.staging.ukuaiqi.com
 app_attachmenthost = attachment.staging.ukuaiqi.com
@@ -8,7 +8,7 @@ app_attachmentbaseurl = https://attachment.staging.ukuaiqi.com/
 app_stathost = stat.staging.ukuaiqi.com
 app_statbaseurl = https://stat.staging.ukuaiqi.com
 
-[HTTP]
+[HTTP_product]
 host = ukuaiqi.com
 baseurl = https://ukuaiqi.com/p/oa
 app_userhost = user.ukuaiqi.com
@@ -19,21 +19,21 @@ app_stathost = stat.ukuaiqi.com
 app_statbaseurl = https://stat.ukuaiqi.com
 
 [user]
-username = 16512345671
+username = 16512345673
 password = 123456
-authorization = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDdXJyZW50VXNlciI6eyJVc2VySWQiOiI1OTBhZWJkYmU0NGMzNjZlYWYwMDAwOWUiLCJNUEEiOjE1MzMwMDM1MDgsIkxveW9QbGF0Zm9ybSI6ImlPUyIsIkxveW9WZXJzaW9uQ29kZSI6IjIwMTgwNzA0MDEifSwiZXhwIjoxNTQ5MjY3MzY1fQ.qALuP2rVLs78oRLH8B9K-Y2_mDdEBplZt2BU_TaF1Pg
-userid = 590aebdbe44c366eaf00009e
+authorization = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDdXJyZW50VXNlciI6eyJVc2VySWQiOiI1N2Q2NGY0ZmQzM2M2NTNlM2EwMDAwMzMiLCJNUEEiOjE0OTM5NTIyMTIsIkxveW9QbGF0Zm9ybSI6ImlPUyIsIkxveW9WZXJzaW9uQ29kZSI6IjIwMTgxMDE2MDEifSwiZXhwIjoxNTU1NzUyNzk4fQ.31rY1e7N1kJd9pNjri0yccroFxM24tHTRtydkZenBiQ
+userid = 57d64f4fd33c653e3a000033
 
 [header]
 accept = */*
 loyoosversion = 10.3.2
-loyoversioncode = 2018070401
+loyoversioncode = 2018101601
 accept-language = zh-Hans-CN;q=1
 accept-encoding = gzip, deflate
 content-type = application/json
-user-agent = KuaiQi/2.11.0 (iPhone; iOS 11.4; Scale/2.00)
+user-agent = KuaiQi/2.14.0 (iPhone; iOS 11.4; Scale/2.00)
 loyoplatform = iOS
-loyoversionname = 2.10.0
+loyoversionname = 2.14.0
 connection = keep-alive
 loyoagent = iPhone9,1
 
@@ -106,3 +106,4 @@ init_flow = /api/v2/speedup/flowevent/mobile
 launch_concise = /api/v2/speedup/cusservice/launch/concise
 title = /api/v2/speedup/flowevent/
 remark = /api/v2/speedup/flowevent/remark/
+

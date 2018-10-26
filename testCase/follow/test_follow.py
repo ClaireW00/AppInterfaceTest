@@ -85,6 +85,7 @@ class FollowCase(unittest.TestCase):
         customer_id = self.cust.get_similar_customer()["id"]
         fo = follow.Follow()
         type_id = fo.get_activity_type_id()  # 记录行为中任意一个行为的id
+        print(type_id)
         cust_data = self.fo.new_activity(customer_id).json()["data"]
         data = {
             "uuid": attachments.attachments('0')['UUId'],
@@ -120,14 +121,14 @@ class FollowCase(unittest.TestCase):
                 data["contactPhone"] = cust_data["contacts"][0]["wiretel"][0]
             if "contactRoleId" in cust_data["contacts"][0]:
                 data["contactRoleId"] = cust_data["contacts"][0]["contactRoleId"]
-
-        """
+        '''
         # 测试提醒时时间时写的循环
-        for i in range(8, 25):
-            data["remindAt"] = int(datetime.now().timestamp()) + i*3600
+        for i in range(1, 30, 3):
+            data["remindAt"] = int(datetime.now().timestamp()) + 7*86400 + i*60 - 3600*7
             data["content"] = "发布后写的跟进" + str(random.randint(100, 10000))
-        """
+        '''
         result = fo.create_follow(data)
+
         self.assertEqual(result.status_code, 200, msg=result.text)
         result_json = result.json()
         self.assertEqual(result_json['errcode'], 0, msg=result.text)
@@ -159,7 +160,14 @@ class FollowCase(unittest.TestCase):
             }
         if "tags" in sale_detail:
             data["tags"] = sale_detail["tags"]
+        '''
+        # 测试提醒时时间时写的循环
+        for i in range(1, 60, 3):
+            data["remindAt"] = int(datetime.now().timestamp()) + 3 * 3600 + i * 60
+            data["content"] = "发布后写的跟进" + str(random.randint(100, 10000))
+        '''
         result = self.fo.create_follow(data)
+
         self.assertEqual(result.status_code, 200, msg=result.text)
         result_json = result.json()
         self.assertEqual(result_json["errcode"], 0, msg=result.text)

@@ -27,7 +27,7 @@ class ReadConfig(object):
     # 更新指定user下的token
     def set_token(self, token):
         self.cf.set("user", "Authorization", token)
-        self.cf.write(open('E:\\Python\\AppInterfaceTest\\config', 'w'))  # 将对象接入文件
+        self.cf.write(open('C:\\Users\\Administrator\\AppInterfaceTest\\config', 'w'))  # 将对象接入文件
 
     # 更新登录人的userId
     def set_UserId(self, userId):

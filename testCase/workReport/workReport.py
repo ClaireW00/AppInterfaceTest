@@ -1,9 +1,9 @@
 "工作报告test"
 __author__ = 'Claire Wang'
 
-import time,requests,unittest
+import requests
 import readConfig
-from commom import Excel_rd,attachments, get_Time_Type
+from commom import get_Time_Type
 from testCase.user import user
 
 

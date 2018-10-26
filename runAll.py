@@ -22,13 +22,13 @@ def set_token():
         authorization = 'Bearer ' + access_data
         f.set_UserId(userid)
         f.set_token(authorization)
+
         return authorization
     else:
         print('登陆失败！，后续用例不再执行')
 
 
 def all_case():  # 待执行用例的目录
-
     case_dir = 'C:\\Users\\Administrator\\AppInterfaceTest\\testCase'
     testcase = unittest.TestSuite()
     discover = unittest.defaultTestLoader.discover(case_dir, pattern='test*.py', top_level_dir=None)    # 返回值是个二级数组
@@ -68,6 +68,7 @@ def send_report(report_path):      # 发送报告到指定email
 
 if __name__ == "__main__":
     token = set_token()
+
     if token is not None:     # 登录成功后执行测试用例
         report_path = 'C:\\Users\\Administrator\\AppInterfaceTest\\result.html'
         fp = open(report_path, 'wb')
@@ -75,4 +76,6 @@ if __name__ == "__main__":
         runner.run(all_case())
         fp.close()
         send_report(report_path)
+
+
 

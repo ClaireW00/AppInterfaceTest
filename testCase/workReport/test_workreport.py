@@ -1,8 +1,8 @@
-'工作报告test'
-__author__='Claire Wang'
+"工作报告test"
+__author__ = 'Claire Wang'
 
 import time,requests,unittest,math
-from commom import Excel_rd,attachments, get_Time_Type
+from commom import attachments, get_Time_Type
 from testCase.user import user
 from testCase.workReport import workReport
 
@@ -12,26 +12,11 @@ class WorkReportCase(unittest.TestCase):
     def setUpClass(cls):
         cls.wreport = workReport.WorkReport()
         print("报告管理测试：start")
-    # class workReport(object):
-    '''
-        def __init__(self,title,content,type,beginAt,endAt,projectId,attachmentUUId,reviewer,members,isDelayed,crmDatas):
-            self.title=title               # 标题，string,提交后自动生成
-            self.content=content           #内容，string
-            self.type =type                #"报告类型，int,1：日报，2：周报，3：月报"
-            self.beginAt=beginAt           #"时间戳 报告起始日期",int64
-            self.endAt  =beginAt           #"时间戳 报告结束日期",int64
-            self.projectId=projectId         #项目id，string
-            self.attachmentUUId=attachmentUUId    #"附件guid",string
-            self.reviewer=reviewer           #"点评人","Reviewer"
-            self.members =members            #"抄送人""Member"
-            self.isDelayed=isDelayed         # "是否补签",bool
-            self.crmDatas=crmDatas           # "过程统计信息", Array("CRMData")
-    '''
 
     # 测试获取跟进中的跟进统计-本月,暂时未判断数据是否正确
     def test_get_CrmData(self):
         """测试报告中跟进统计用例：获取本月跟进统计"""
-        begainAT, endAt=get_Time_Type.getTimeRegionByType('TheMonth')
+        begainAT, endAt = get_Time_Type.getTimeRegionByType('TheMonth')
         r = self.wreport.get_CrmData(begainAT, endAt)
         print("111", r.text)
         self.assertEqual(r.status_code, 200)
@@ -167,20 +152,6 @@ class WorkReportCase(unittest.TestCase):
                     reviewerName=wr['reviewerName']
                     creatorName=wr['creatorName']
           '''
-
-    def T_Wreport_TeamList(self):
-        """测试获取团队报告列表用例：获取本月团队报告"""
-        startAt, endAt = get_Time_Type.getTimeRegionByType('TheMonth')
-        result = self.wreport.get_Teamlist(startAt, endAt, reportType=0, isReviewed=0)
-        self.assertEqual(result.status_code, 200)
-        if result.status_code == 200:
-            records = result.json()['records']
-            totalRecords = result.json()['totalRecords']
-
-            t=records[0]['createdAt']  # 获取第一条数据的创建时间
-            for wr in records:  # 判断数据列表按创建时间倒叙
-                self.assertTrue(t >= wr['createdAt'])
-                t = wr['createdAt']
 
     def test_Wreport_Search(self):
         """测试报告列表搜索：关键字“测试周报"""
